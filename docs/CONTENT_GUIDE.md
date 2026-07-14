@@ -43,6 +43,31 @@ export const restaurants: Restaurant[] = [
 
 ⭐ 嘉義是品質基準城（作者家鄉、會逐店驗貨）：資料正確性標準最嚴，寧可 25 家全對，不要 28 家有錯。
 
+## 擴充批次 R2：餐廳級＋咖啡店（2026-07-15）
+
+首發偏小吃/老店，R2 補「正經餐廳」與咖啡店。規則與首發完全相同，另加：
+
+- 目標客層是**聚餐/約會/犒賞**：義法/牛排/日料（壽司/割烹/燒肉/居酒屋）/無菜單料理/台菜宴席餐廳/brunch，priceBand 以 2–4 為主（cafe 可為 1–2）。
+- `cafe` 菜系收**特色咖啡店**：自家烘焙、老宅/老屋改建、喫茶老店；連鎖體系只收城市代表性創始店。
+- 餐廳汰換率遠高於小吃老店：**歇業/搬遷查核加倍嚴格**，必須有 2025 年後仍營業的佐證（近期食記/官方社群/訂位頁），查不到就換一家。
+- 米其林星級/必比登/500盤入選者優先；fine dining 訂位制在 tips 註明。
+- id 沿用城市前綴；**禁止動既有條目**（id 已凍結），只在檔尾 append。
+
+| cityId | R2 追加 | 硬性要求 |
+|---|---|---|
+| taipei | +24（東西各半） | western≥6（牛排/義法/burger brunch）、japanese≥6（壽司/割烹/燒肉/居酒屋/拉麵）、cafe≥4、韓泰等 asian≥2 |
+| taichung | +14 | western≥3、japanese≥3、cafe≥3 |
+| tainan | +14 | western≥3、japanese≥3、cafe≥3（老屋咖啡是台南強項） |
+| kaohsiung | +14 | western≥3、japanese≥3、cafe≥3 |
+| chiayi | +10 | western≥2、japanese≥2、cafe≥3（檜意森活村/老屋系） |
+| hsinchu | +8 | western≥2、japanese≥2、cafe≥2 |
+| yilan | +8 | western≥2、japanese≥1、cafe≥2（宜蘭無菜單/礁溪飯店系可入） |
+| keelung | +6 | japanese 或 seafood 餐廳≥2、cafe≥2 |
+| changhua | +6 | western≥1、japanese≥1、cafe≥2 |
+| hualien | +6 | western≥1、japanese≥1、cafe≥2 |
+| taitung | +6 | western≥1、cafe≥2（鐵花村/糖廠周邊） |
+| donggang | +4 | japanese/seafood 餐廳≥1、cafe≥1 |
+
 ## 每店欄位提醒
 
 - `mustOrder`：招牌必點 1–3 樣，每樣 ≤10 字，是推薦引擎的口味訊號（例：愛牛肉麵的人會被跨城推牛肉麵），寫食物名不寫形容詞。

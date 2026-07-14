@@ -55,7 +55,7 @@ const inBox = (c, b) =>
 const CUISINES = new Set([
   "taiwanese", "street-food", "noodles", "breakfast", "seafood", "hotpot",
   "bbq-fried", "japanese", "chinese", "western", "asian", "dessert",
-  "drinks", "bakery", "vegetarian",
+  "drinks", "cafe", "bakery", "vegetarian",
 ]);
 const TAG_SET = new Set(TAGS);
 // 模板句黑名單：抓空泛行銷腔（WARN，人工複查）

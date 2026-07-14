@@ -27,8 +27,9 @@ id 治理規則：
 
 ## Canonical IDs（內容定稿後回填）
 
-共 295 家（2026-07-15 定稿）
-### taipei (40)
+共 415 家（2026-07-15 R2 定稿）
+
+### taipei (64)
 - `taipei-ay-chung-noodle` 阿宗麵線
 - `taipei-wangs-broth` 小王煮瓜
 - `taipei-yuan-fang-gua-bao` 源芳刈包
@@ -49,6 +50,18 @@ id 治理規則：
 - `taipei-da-qiao-tou-rice-tube` 大橋頭老牌筒仔米糕
 - `taipei-shuang-lian-sweet-soup` 雙連圓仔湯
 - `taipei-bolero-restaurant` 波麗路
+- `taipei-dannys-steakhouse` 教父牛排
+- `taipei-tairroir` 態芮
+- `taipei-impromptu-by-paul-lee` Impromptu by Paul Lee
+- `taipei-san-wei-shi-tang` 三味食堂
+- `taipei-da-che-lun-train-sushi` 大車輪火車壽司
+- `taipei-addiction-aquatic` 上引水產
+- `taipei-simple-kaffa-flagship` Simple Kaffa 興波咖啡
+- `taipei-fong-da-coffee` 蜂大咖啡
+- `taipei-san-coffee` 森高砂咖啡館
+- `taipei-ming-fu-taiwanese` 明福台菜海產
+- `taipei-mountain-sea-house` 山海樓
+- `taipei-tien-hsiang-lo` 天香樓
 - `taipei-yongkang-beef-noodle` 永康牛肉麵
 - `taipei-dongmen-dumpling-house` 東門餃子館
 - `taipei-tianjin-scallion-pancake` 天津蔥抓餅
@@ -69,8 +82,20 @@ id 治理規則：
 - `taipei-golden-formosa-taiwanese` 金蓬萊遵古台菜
 - `taipei-ai-zai-cai-braised-pork-rice` 矮仔財滷肉飯
 - `taipei-kao-chi-tea-shop` 高記茶莊
+- `taipei-robuchon-latelier` 侯布雄法式餐廳
+- `taipei-longtail-restaurant` Longtail
+- `taipei-smith-wollensky` Smith & Wollensky
+- `taipei-sushi-nomura` 鮨野村
+- `taipei-kokuraya-unagi` 小倉屋
+- `taipei-hutong-yakiniku` 胡同燒肉
+- `taipei-gabee-coffee` GABEE.
+- `taipei-journey-kaffe` 覺旅咖啡
+- `taipei-sheme-house` 拾米屋
+- `taipei-baan-phadthai` 帕泰家
+- `taipei-samwon-garden` 三元花園韓式餐廳
+- `taipei-fujin-tree-taiwanese` 富錦樹台菜香檳
 
-### keelung (20)
+### keelung (26)
 - `keelung-wu-ding-bian-cuo` 百年吳家鼎邊趖
 - `keelung-tian-yi-xiang` 天一香肉羹順
 - `keelung-wu-ji-crab-geng` 吳記螃蟹羹油飯
@@ -91,8 +116,14 @@ id 治理規則：
 - `keelung-jin-long-rou-geng` 金龍肉焿
 - `keelung-guo-jia-guozai-soup` 郭家巷頭粿仔湯
 - `keelung-tu-da-chikuwa` 涂大手工碳烤吉古拉
+- `keelung-yu-pin-xuan-seafood` 漁品軒海鮮餐廳
+- `keelung-wakayo-sushi` 和蕎屋壽司料理店
+- `keelung-sandaime-ramen` 定置漁場三代目 正濱漁港店
+- `keelung-miaopu-italian` 苗圃義大利餐廳
+- `keelung-tuman-cafe` 圖們咖啡
+- `keelung-marucorner-cafe` 丸角自轉生活咖啡
 
-### hsinchu (20)
+### hsinchu (28)
 - `hsinchu-guo-run-bing` 郭家元祖潤餅
 - `hsinchu-a-cheng-hao-rice-noodles` 阿城號米粉
 - `hsinchu-wang-ji-oyster-omelet` 王記蚵仔煎
@@ -113,8 +144,16 @@ id 治理規則：
 - `hsinchu-duanchunzhen-beef-noodle` 段純貞牛肉麵
 - `hsinchu-shaobing-house` 燒餅屋
 - `hsinchu-shijia-fish-ball` 石家魚丸
+- `hsinchu-yats-leaf` YATS 葉子
+- `hsinchu-stanley-steakhouse` 史坦利美式牛排
+- `hsinchu-friendy-pizzeria` Friendy Pizzeria
+- `hsinchu-dongjie-japanese` 東街日本料理
+- `hsinchu-today-fish-market` 今日魚市日本料理
+- `hsinchu-ink-coffee` 墨咖啡
+- `hsinchu-jsygs-art-cafe` 江山藝改所
+- `hsinchu-a-moom-cafe` 李克承博士故居 a-moom
 
-### yilan (22)
+### yilan (30)
 - `yilan-beimen-garlic-pork-soup` 北門蒜味肉羹（宣卡桑）
 - `yilan-yixiang-eatery` 一香飲食店
 - `yilan-wenchang-zhajiang-noodles` 文昌炸醬麵
@@ -137,8 +176,16 @@ id 治理規則：
 - `yilan-toucheng-majiang-noodles` 麻醬麵蛤蜊湯（瑞宏小吃）
 - `yilan-dingpu-ama-scallion-pancake` 頂埔阿嬤蔥油餅
 - `yilan-jiafuge-seafood` 甲富哥活海產
+- `yilan-le-temps-bistro` Le Temps 食光1998
+- `yilan-yao-mian-italian` 窯。麵義式餐坊
+- `yilan-mihan-jiaoxi` 三燔礁溪
+- `yilan-lihai-cafe` 里海cafe'
+- `yilan-minwater-teppanyaki` 明水然·樂 礁溪店
+- `yilan-shandu-omakase` 山渡空間食藝
+- `yilan-mingcao-coffee` 鳴草咖啡自家烘焙館
+- `yilan-mr-brown-castle` 伯朗咖啡城堡一館
 
-### taichung (30)
+### taichung (44)
 - `taichung-shanhe-lu-rou-fan` 山河魯肉飯
 - `taichung-wang-radish-cake` 王記菜頭粿糯米腸
 - `taichung-mao-chuan-meatball` 茂川肉丸
@@ -169,8 +216,22 @@ id 治理規則：
 - `taichung-wen-dao` 溫叨古早味料理餐廳
 - `taichung-shantou-liu-hotpot` 汕頭牛肉劉沙茶爐
 - `taichung-shuang-jiang-tea` 雙江茶行
+- `taichung-fleur-de-sel` 鹽之華法國餐廳
+- `taichung-sur` 澀 Sur-
+- `taichung-forchetta` Forchetta
+- `taichung-jl-studio` JL Studio
+- `taichung-oretachi-no-nikuya` 俺達の肉屋
+- `taichung-umai-yakiniku` 屋馬燒肉 中港店
+- `taichung-isagi-kappo` いさぎ ISAGI 潔
+- `taichung-coffee-stopover` Coffee Stopover
+- `taichung-factory-mojocoffee` The Factory Mojocoffee
+- `taichung-come-true-coffee` 成真咖啡 審計店
+- `taichung-shan-shin` 膳馨民間創作料理
+- `taichung-karuizawa-hotpot` 輕井澤鍋物 公益店
+- `taichung-qin-yuan-chun` 沁園春
+- `taichung-minimal` MINIMAL
 
-### changhua (22)
+### changhua (28)
 - `changhua-a-zhang-ba-wan` 阿璋肉圓
 - `changhua-north-gate-ba-wan` 北門口肉圓
 - `changhua-a-quan-braised-pork-rice` 阿泉爌肉飯
@@ -193,8 +254,14 @@ id 治理規則：
 - `changhua-yangzhou-ba-wan-taro-balls` 楊州肉圓芋丸
 - `changhua-fa-ji-fen-guo-ice` 發記粉粿冰
 - `changhua-dong-hua-mian-cha` 東華素食麵茶
+- `changhua-salt-coast-bistro` 鹽岸－島嶼的義法料理
+- `changhua-mu-hiding-omakase` 沐藏料理所
+- `changhua-farming-memory` 農食憶料理坊
+- `changhua-monsoon-coffee` 東北季風 Monsoon coffee
+- `changhua-stable-fly-cafe` Stable Fly 穩定飛行模式
+- `changhua-zozo-claypot-cafe` 煮煮陶鍋咖啡
 
-### chiayi (28)
+### chiayi (38)
 - `chiayi-liu-lizhang-turkey-rice` 劉里長雞肉飯
 - `chiayi-kuo-family-turkey-rice` 郭家雞肉飯
 - `chiayi-taocheng-sanho-turkey-rice` 桃城三禾火雞肉飯
@@ -223,8 +290,18 @@ id 治理規則：
 - `chiayi-taiwanren-ice` 咱台灣人的冰
 - `chiayi-morikoohii-cafe` 森咖啡
 - `chiayi-yuan-braised-pork-rice` 源滷肉飯
+- `chiayi-shimo-sora-coffee` 霜空珈琲
+- `chiayi-mugeneration-cafe` 木更 Mugeneration
+- `chiayi-happyhill-cafe` 幸福山丘 HappyHill
+- `chiayi-tenderness-bistro` 溫淳 Tenderness
+- `chiayi-hana-asagi-brunch` 花淺蔥
+- `chiayi-morikawa-dondon` 森川丼丼
+- `chiayi-songzhu-washoku` 松築創作和食料理
+- `chiayi-1961-seafood-grill` 1961海鮮碳烤
+- `chiayi-jiayuan-shantou-hotpot` 佳園汕頭火鍋
+- `chiayi-yisin-yakiniku` 壹心燒肉
 
-### tainan (35)
+### tainan (49)
 - `tainan-wenchang-beef-soup` 文章牛肉湯
 - `tainan-shijingjiu-beef-soup` 石精臼牛肉湯
 - `tainan-acun-beef-soup` 阿村第二代牛肉湯
@@ -260,8 +337,22 @@ id 治理規則：
 - `tainan-howchou-shacha-hotpot` 小豪洲沙茶爐
 - `tainan-jiulaifa-bakery` 舊來發餅舖
 - `tainan-klin-baozi` 克林台包
+- `tainan-kantan-cafe` 甘單咖啡
+- `tainan-paripari-apt` Paripari apt.
+- `tainan-kadoya-kissaten` KADOYA喫茶店
+- `tainan-principe-french` Principe 原則
+- `tainan-corner-steak-house` 轉角餐廳
+- `tainan-lherbe-bistro` 香草小餐酒
+- `tainan-hara-peko` HARA PEKO
+- `tainan-mao-don` 毛丼 丼飯專門店
+- `tainan-tanzuomali-yakiniku` 碳佐麻里精品燒肉 台南新興店
+- `tainan-nanasen-kappo` 七撰 割烹
+- `tainan-zhuxinju-tasting` 筑馨居
+- `tainan-good-hunan-cuisine` 有你真好 湘菜沙龍
+- `tainan-jinxia-restaurant` 錦霞樓
+- `tainan-gyugozou-beef` 牛五蔵
 
-### kaohsiung (30)
+### kaohsiung (44)
 - `kaohsiung-duck-zhen` 鴨肉珍
 - `kaohsiung-rouzong-tai` 肉粽泰
 - `kaohsiung-gang-yuan-beef-noodles` 港園牛肉麵
@@ -292,8 +383,22 @@ id 治理規則：
 - `kaohsiung-wu-pao-chun-bakery` 吳寶春麥方店
 - `kaohsiung-wan-san-seafood` 萬三小吃部
 - `kaohsiung-ya-jiao-seafood` 鴨角活海產
+- `kaohsiung-new-international-steakhouse` 新國際西餐廳
+- `kaohsiung-thomas-chien` THOMAS CHIEN
+- `kaohsiung-gien-jia` Gien Jia 挑食
+- `kaohsiung-haili` Haili
+- `kaohsiung-sho` 承 Sho
+- `kaohsiung-ukai-tei` Ukai-tei Kaohsiung
+- `kaohsiung-tanzuo-mali-yakiniku` 碳佐麻里精品燒肉 高雄時代店
+- `kaohsiung-akoya-uohane` あこや太羽魚貝料理専門店
+- `kaohsiung-hifumi-tei` 書店喫茶一二三亭
+- `kaohsiung-xiao-ti-coffee` 小堤咖啡
+- `kaohsiung-ginza-house` 銀座聚場
+- `kaohsiung-goood-time` 龜時間
+- `kaohsiung-bai-yu-lou` 白玉樓
+- `kaohsiung-gen` 雋 GEN
 
-### donggang (14)
+### donggang (18)
 - `donggang-wang-jiang-bluefin-sashimi` 王匠黑鮪魚生魚片
 - `donggang-yu-lang-sashimi-sushi` 漁郎生魚片握壽司
 - `donggang-ruizihao-swordfish-tempura` 瑞字號旗魚黑輪
@@ -308,8 +413,12 @@ id 治理規則：
 - `donggang-lao-er-seafood-stirfry` 老二海鮮特炒
 - `donggang-bing-no-ie` 冰の家
 - `donggang-wei-yi-fish-floss` 東港味益鬆品專賣店
+- `donggang-jhen-jhen-seafood` 珍珍海鮮餐廳
+- `donggang-xiwei-sushi` 細尾手作壽司
+- `donggang-elong-sushi` 瀧壽司
+- `donggang-maritime-chapel-cafe` 海上教堂咖啡
 
-### hualien (20)
+### hualien (26)
 - `hualien-yexiang-wonton` 液香扁食店
 - `hualien-hualienxiang-wonton` 花蓮香扁食
 - `hualien-gongzheng-baozi` 公正包子店
@@ -330,8 +439,14 @@ id 治理規則：
 - `hualien-mingxin-ice` 明新冰菓店
 - `hualien-tzen-mochi` 曾記麻糬
 - `hualien-ebisu-bakery` 惠比須餅舖
+- `hualien-old-time-izakaya` 老時光燒肉酒肴
+- `hualien-fujo-restaurant` fūjō restaurant
+- `hualien-rourou-table` 肉肉餐桌
+- `hualien-chef-ming` 銘師父餐廳
+- `hualien-giocare-coffee` Giocare義式手沖咖啡
+- `hualien-caffe-fiore` Caffe Fiore 珈琲花
 
-### taitung (14)
+### taitung (20)
 - `taitung-rongshuxia-mitaimu` 榕樹下米苔目
 - `taitung-laodongtai-mitaimu` 老東台米苔目
 - `taitung-beinan-pig-blood-soup` 卑南豬血湯
@@ -346,4 +461,9 @@ id 治理規則：
 - `taitung-mibanai-indigenous` 米巴奈山地美食坊
 - `taitung-jinhuaxuan-buns` 金花軒卑南包仔店
 - `taitung-sutianzhu-veg-noodles` 蘇天助素食麵
-
+- `taitung-mloma` M'loma
+- `taitung-yucai-kappo` 漁采時令料理
+- `taitung-john-johns-kitchen` 強強廚房
+- `taitung-ouxiang-steakhouse` 歐鄉牛排館
+- `taitung-hiii-birdie-cafe` 有知鳥 hiii birdie
+- `taitung-taimali-cafe` 太麻里文創咖啡館

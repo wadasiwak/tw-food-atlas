@@ -14,7 +14,8 @@ export const CUISINE_META: Record<Cuisine, { zh: string; en: string; emoji: stri
   'western': { zh: '西式', en: 'Western', emoji: '🍝' },
   'asian': { zh: '亞洲風味', en: 'Pan-Asian', emoji: '🍛' },
   'dessert': { zh: '甜點冰品', en: 'Dessert', emoji: '🍧' },
-  'drinks': { zh: '茶飲咖啡', en: 'Drinks', emoji: '🧋' },
+  'drinks': { zh: '茶飲', en: 'Drinks', emoji: '🧋' },
+  'cafe': { zh: '咖啡店', en: 'Cafe', emoji: '☕' },
   'bakery': { zh: '糕餅伴手禮', en: 'Bakery', emoji: '🥮' },
   'vegetarian': { zh: '素食', en: 'Vegetarian', emoji: '🥬' },
 }
