@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="theme-color" content="#131017" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="台灣美食圖鑑：全台精選名店老店，地圖找店、菜系價位篩選、口味評分與個人化推薦，還能分享你的美食 Top 10。" />
+    <meta name="copyright" content="© 2026 wadasiwak. All rights reserved." />
+    <title>台灣美食圖鑑 🍜 地圖找店 × 口味推薦</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="台灣美食圖鑑 🍜 地圖找店 × 口味推薦" />
+    <meta
+      property="og:description"
+      content="全台精選名店老店：地圖找店、菜系價位篩選、口味評分與個人化推薦，分享你的美食 Top 10。免下載免註冊。"
+    />
+    <meta property="og:url" content="https://wadasiwak.github.io/tw-food-atlas/" />
+    <meta
+      property="og:image"
+      content="https://wadasiwak.github.io/tw-food-atlas/og-image.png"
+    />
+    <meta property="og:image:width" content="2400" />
+    <meta property="og:image:height" content="1260" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // 匿名流量統計（GoatCounter，無 cookie）。
+      // path 只回報路徑：#share= hash 帶使用者評分資料，絕不能進 analytics。
+      window.goatcounter = {
+        path: function () {
+          return location.pathname
+        },
+      }
+    </script>
+    <script data-goatcounter="https://wadasiwak.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script src="https://wadasiwak.github.io/japan-planner/widget.js" data-site="tw-food-atlas" defer></script>
+  </body>
+</html>

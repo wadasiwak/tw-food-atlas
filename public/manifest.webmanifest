@@ -1,0 +1,13 @@
+{
+  "name": "台灣美食圖鑑",
+  "short_name": "美食圖鑑",
+  "description": "全台精選名店老店：地圖找店、菜系價位篩選、口味評分與個人化推薦",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#131017",
+  "theme_color": "#131017",
+  "icons": [
+    { "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "./apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}
