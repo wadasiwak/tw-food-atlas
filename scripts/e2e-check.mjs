@@ -122,7 +122,26 @@ try {
   if (gcPath.includes('#') || gcPath.includes('?') || gcPath.includes('share'))
     fail(`goatcounter path 不可含 hash/query，實得: ${gcPath}`)
 
-  // 9. 地圖模式：WebGL 環境開地圖容器；無 WebGL 顯示降級提示（兩者擇一，不可白屏）
+  // 9. 搜尋：輸入第一家店名 → 結果含該店且數量縮小
+  await page.evaluate(() => window.__twfood.setTab('browse'))
+  const targetName = await page.evaluate(() => window.__twfood.restaurants()[0].name)
+  await page.fill('.search-input', targetName)
+  await page.waitForTimeout(300)
+  const searchCount = await page.locator('.grid .card').count()
+  const total = await page.evaluate(() => window.__twfood.count)
+  if (searchCount === 0 || searchCount >= total) fail(`搜尋「${targetName}」結果不合理 (${searchCount}/${total})`)
+  await page.fill('.search-input', '')
+
+  // 10. 🎲 今晚吃什麼：點了要開詳情
+  await page.click('.dice-btn')
+  await page.waitForSelector('[data-testid="detail"]', { timeout: 3000 })
+  await page.keyboard.press('Escape')
+
+  // 11. 口味輪廓：已有評分時「我的」tab 要顯示
+  await page.evaluate(() => window.__twfood.setTab('list'))
+  await page.waitForSelector('[data-testid="taste"] .taste-chip', { timeout: 3000 })
+
+  // 12. 地圖模式：WebGL 環境開地圖容器；無 WebGL 顯示降級提示（兩者擇一，不可白屏）
   await page.evaluate(() => window.__twfood.setTab('browse'))
   await page.click('.view-toggle button >> nth=1')
   await page.waitForTimeout(1500)
@@ -131,7 +150,7 @@ try {
   if (!hasMap && !hasFallback) fail('地圖模式應顯示地圖或降級提示，不可空白')
 
   await browser.close()
-  console.log('e2e OK：篩選、詳情、#r 直開、推薦+理由、換一批、分享+垃圾hash、持久化、隱私、地圖降級全部通過')
+  console.log('e2e OK：篩選、詳情、#r 直開、推薦+理由、換一批、分享+垃圾hash、持久化、隱私、搜尋、隨機抽、口味輪廓、地圖降級全部通過')
 } finally {
   server.kill()
 }

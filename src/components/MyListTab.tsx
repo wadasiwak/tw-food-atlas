@@ -1,9 +1,10 @@
-import { useRef, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import type { Restaurant } from '../data/types'
 import { restaurantById } from '../data'
 import { useRatingStore } from '../store'
 import { topRated, buildShareUrl } from '../share'
-import { useT, fmt } from '../i18n'
+import { tasteProfile } from '../recommend'
+import { useT, useLang, fmt } from '../i18n'
 import { RestaurantCard, scoreColor } from './RestaurantCard'
 import { RateActions } from './RateActions'
 import { cityById } from '../data'
@@ -11,8 +12,14 @@ import { cityById } from '../data'
 export function MyListTab({ all: _all }: { all: Restaurant[] }) {
   const { ratings, skipped, watchlist, removeRating, unmarkSkipped, importAll } = useRatingStore()
   const t = useT()
+  const lang = useLang()
   const [notice, setNotice] = useState('')
   const fileRef = useRef<HTMLInputElement>(null)
+
+  const taste = useMemo(
+    () => tasteProfile(restaurantById, ratings, lang),
+    [ratings, lang],
+  )
 
   const ratedRows = Object.entries(ratings)
     .map(([id, r]) => ({ restaurant: restaurantById.get(id), ...r, id }))
@@ -82,6 +89,20 @@ export function MyListTab({ all: _all }: { all: Restaurant[] }) {
         />
       </div>
       {notice && <div className="notice">{notice}</div>}
+
+      {taste.length > 0 && (
+        <div className="taste-box" data-testid="taste">
+          <h3>{t('tasteTitle')}</h3>
+          <div className="taste-chips">
+            {taste.map(({ key, label, weight }) => (
+              <span className="chip taste-chip" key={key} style={{ opacity: 0.45 + weight * 0.55 }}>
+                {label}
+              </span>
+            ))}
+          </div>
+          <p className="data-note">{t('tasteHint')}</p>
+        </div>
+      )}
 
       {ratedRows.length + wlRows.length + skippedRows.length === 0 && (
         <div className="empty-hint">{t('emptyList')}</div>

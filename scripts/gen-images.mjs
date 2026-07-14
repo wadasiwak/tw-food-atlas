@@ -22,7 +22,7 @@ const OG_HTML = `<!doctype html><html><head><meta charset="utf-8"><style>
   <div class="emoji">🍜</div>
   <h1>台灣美食圖鑑</h1>
   <p>地圖找店 × 菜系價位篩選 × 口味評分推薦</p>
-  <div class="chips"><span class="chip">🗺️ 12 城市</span><span class="chip">🥢 精選名店</span><span class="chip">📤 分享 Top 10</span></div>
+  <div class="chips"><span class="chip">🗺️ 13 城市</span><span class="chip">🥢 精選名店</span><span class="chip">📤 分享 Top 10</span></div>
 </body></html>`
 
 const ICON_HTML = `<!doctype html><html><head><meta charset="utf-8"><style>

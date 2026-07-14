@@ -11,6 +11,14 @@ export const CITIES: CityDef[] = [
     bbox: { minLat: 24.96, maxLat: 25.22, minLng: 121.42, maxLng: 121.67 },
   },
   {
+    id: "newtaipei",
+    name: "新北",
+    emoji: "🌉",
+    region: "north",
+    // 環繞台北市：西至鶯歌樹林、北至淡水金山、東至九份金瓜石、南至烏來
+    bbox: { minLat: 24.85, maxLat: 25.3, minLng: 121.28, maxLng: 121.95 },
+  },
+  {
     id: "keelung",
     name: "基隆",
     emoji: "⚓",

@@ -21,7 +21,7 @@ declare global {
       ratings: () => Record<string, { score: number }>
       openDetail: (id: string) => void
       setTab: (tab: 'browse' | 'rate' | 'recommend' | 'list') => void
-      restaurants: () => { id: string; city: string; cuisine: string }[]
+      restaurants: () => { id: string; city: string; cuisine: string; name: string }[]
     }
   }
 }
@@ -31,5 +31,6 @@ window.__twfood = {
   ratings: () => useRatingStore.getState().ratings,
   openDetail: (id) => useUiStore.getState().openDetail(id),
   setTab: (tab) => useUiStore.getState().setTab(tab),
-  restaurants: () => ALL_RESTAURANTS.map(({ id, city, cuisine }) => ({ id, city, cuisine })),
+  restaurants: () =>
+    ALL_RESTAURANTS.map(({ id, city, cuisine, name }) => ({ id, city, cuisine, name })),
 }

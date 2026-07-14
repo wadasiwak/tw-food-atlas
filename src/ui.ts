@@ -8,6 +8,7 @@ interface BrowseFilter {
   cuisine: Cuisine | ''
   price: PriceBand | 0
   tag: Tag | ''
+  query: string // 店名/招牌菜/商圈全文搜尋
 }
 
 interface UiState extends BrowseFilter {
@@ -30,6 +31,7 @@ export const useUiStore = create<UiState>()((set) => ({
   cuisine: '',
   price: 0,
   tag: '',
+  query: '',
   detailId: null,
   setTab: (tab) => set({ tab, detailId: null }),
   setFilter: (f) => set(f),
@@ -42,6 +44,7 @@ export const useUiStore = create<UiState>()((set) => ({
       cuisine: f.cuisine ?? '',
       price: f.price ?? 0,
       tag: f.tag ?? '',
+      query: f.query ?? '',
     }),
   openDetail: (id) => {
     history.replaceState(null, '', `#r/${id}`)
