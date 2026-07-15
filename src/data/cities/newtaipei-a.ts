@@ -1,4 +1,251 @@
 import type { Restaurant } from "../types";
 
-// (待 R3 內容批次填入)
-export const restaurants: Restaurant[] = [];
+// newtaipei-a 批次（R3 首發）：核心都會區——板橋/三重/新莊/中永和/新店。
+// 淡水/九份/三峽/鶯歌/深坑/烏來歸 newtaipei-b。
+export const restaurants: Restaurant[] = [
+  // ---- 板橋 ----
+  {
+    id: "newtaipei-ukuko-oyster-noodle",
+    name: "油庫口蚵仔麵線",
+    city: "newtaipei",
+    area: "板橋",
+    center: { lat: 25.0189, lng: 121.4669 },
+    cuisine: "noodles",
+    priceBand: 1,
+    tags: ["老店", "排隊名店", "在地人愛"],
+    mustOrder: ["蚵仔大腸麵線", "炭烤香腸"],
+    blurb:
+      "1986 年在中油油庫出入口起家的麵線專門店，手工麵線配當日現處理的蚵仔與滷大腸，起鍋撒自炸油蔥頭提香。板橋人的標準吃法是再配一根現烤炭香腸，麵線加香腸這套組合就是從這裡開始流行的。",
+    tips: "09:30–19:00；午餐與下午尖峰天天排隊，點麵線記得加一根炭烤香腸。",
+    since: 1986,
+    gmapsQuery: "油庫口蚵仔麵線 板橋",
+  },
+  {
+    id: "newtaipei-gao-ji-fried-squid",
+    name: "高記生炒魷魚",
+    city: "newtaipei",
+    area: "板橋",
+    center: { lat: 25.0104, lng: 121.4574 },
+    cuisine: "street-food",
+    priceBand: 1,
+    tags: ["市場美食", "老店", "在地人愛"],
+    mustOrder: ["生炒魷魚", "炸蘿蔔糕", "芋粿巧"],
+    blurb:
+      "黃石市場裡傳承兩代的生炒魷魚攤，厚切魷魚燙得脆彈，泡進酸甜勾芡湯裡配上高麗菜。再加點炸蘿蔔糕和芋粿巧湊成三合一，百元有找就能在市場裡吃得滿足，是板橋人午餐的老習慣。",
+    tips: "08:00–17:30、週一公休；內行點法是生炒魷魚加炸物的三合一組合。",
+    gmapsQuery: "高記生炒魷魚 板橋",
+  },
+  {
+    id: "newtaipei-wang-ji-sesame-oil-chicken",
+    name: "王記好吃麻油雞",
+    city: "newtaipei",
+    area: "湳雅夜市",
+    center: { lat: 25.006, lng: 121.455 },
+    cuisine: "taiwanese",
+    priceBand: 2,
+    tags: ["夜市", "排隊名店", "在地人愛", "宵夜"],
+    mustOrder: ["麻油雞腿", "乾麵線"],
+    blurb:
+      "湳雅夜市裡名氣最響的麻油雞攤，麻油與老薑下得重，燉到骨肉一撥就分離的大雞腿是招牌。麻油雞湯可以免費續加，配一碗淋上雞湯的乾麵線，是板橋人冬夜與宵夜場的固定行程。",
+    tips: "17:30 開賣、雞腿約 18 點後才供應，想吃腿要早到；雞湯可免費續。",
+    gmapsQuery: "王記好吃麻油雞 板橋",
+  },
+  {
+    id: "newtaipei-merci-vielle",
+    name: "Merci Vielle",
+    city: "newtaipei",
+    area: "板橋",
+    center: { lat: 25.0096, lng: 121.4572 },
+    cuisine: "cafe",
+    priceBand: 2,
+    tags: ["冷氣內用", "在地人愛"],
+    mustOrder: ["紅豆丹麥吐司", "手沖咖啡"],
+    blurb:
+      "藏在黃石市場旁暗巷二樓的老宅咖啡館，木門、鐵花窗與毛玻璃全是數十年老件，咖啡豆由店內烘豆師自家烘焙。招牌紅豆丹麥吐司夾十勝紅豆與麻糬，全店只有五桌上下，安靜得不像在市場邊。",
+    tips: "下午一點才開、僅約五桌不接受訂位；入口在慈惠宮旁暗巷，找二樓。",
+    gmapsQuery: "Merci Vielle 板橋",
+  },
+  {
+    id: "newtaipei-xiao-pan-cake",
+    name: "小潘蛋糕坊",
+    city: "newtaipei",
+    area: "板橋",
+    center: { lat: 25.0155, lng: 121.4559 },
+    cuisine: "bakery",
+    priceBand: 2,
+    tags: ["伴手禮", "排隊名店", "老店"],
+    mustOrder: ["鳳凰酥", "鳳梨酥"],
+    blurb:
+      "板橋伴手禮的代名詞，招牌鳳凰酥在鳳梨餡裡包進鹹蛋黃，外皮走鬆軟蛋糕路線，一天能賣出上萬顆。平日就有人排隊，中秋前隊伍固定排到巷口，行家會指名買不裝盒的散裝酥。",
+    tips: "店在窄巷內不好停車；中秋前後排隊爆量，出發前先電話確認。",
+    since: 1980,
+    gmapsQuery: "小潘蛋糕坊 板橋",
+  },
+
+  // ---- 三重 ----
+  {
+    id: "newtaipei-jin-da-braised-pork-rice",
+    name: "今大魯肉飯",
+    city: "newtaipei",
+    area: "三重",
+    center: { lat: 25.0644, lng: 121.4916 },
+    cuisine: "street-food",
+    priceBand: 1,
+    tags: ["老店", "排隊名店", "在地人愛"],
+    mustOrder: ["魯肉飯", "滷白菜", "香菇雞湯"],
+    blurb:
+      "三重滷肉飯激戰區的指標店家，肥瘦比例偏肥的滷肉澆上熱飯入口即化，湯品用老母雞與豬大骨熬底。創辦人出身青葉餐廳主廚，把餐廳手路做進一碗幾十元的滷肉飯，也因此入選米其林指南。",
+    tips: "06:30 開賣、週四公休、只收現金；尖峰幾乎整天排隊，離峰去快很多。",
+    since: 2002,
+    gmapsQuery: "今大魯肉飯 三重",
+  },
+  {
+    id: "newtaipei-wan-li-meatball",
+    name: "萬粒肉圓",
+    city: "newtaipei",
+    area: "三和夜市",
+    center: { lat: 25.068, lng: 121.4995 },
+    cuisine: "street-food",
+    priceBand: 1,
+    tags: ["夜市", "老店", "在地人愛"],
+    mustOrder: ["肉圓", "貢丸湯"],
+    blurb:
+      "三和夜市入口賣了五十年的肉圓攤，菜單從頭到尾只有肉圓和貢丸湯兩樣。低溫油泡的外皮軟中帶 Q，內餡是大塊豬肉配脆口筍塊，貢丸湯能免費續；老攤前兩年整修成明亮小店，味道照舊。",
+    tips: "上午十一點就開、比夜市早；熟客直接喊「一套」＝肉圓加貢丸湯。",
+    since: 1974,
+    gmapsQuery: "萬粒肉圓 三重",
+  },
+
+  // ---- 新莊 ----
+  {
+    id: "newtaipei-a-rui-guan-kueh",
+    name: "阿瑞官粿店",
+    city: "newtaipei",
+    area: "新莊",
+    center: { lat: 25.0371, lng: 121.4586 },
+    cuisine: "dessert",
+    priceBand: 1,
+    tags: ["老店", "伴手禮", "在地人愛"],
+    mustOrder: ["芋粿巧", "草仔粿", "紅龜粿"],
+    blurb:
+      "1869 年開業、傳到第五代的新莊廟街手工粿店，店名來自人稱阿瑞官的創始女主人。招牌芋粿巧塞進大量芋頭籤料多紮實，草仔粿、紅龜粿每天現做，是廟街香火養出來的百年米食舖。",
+    tips: "08:00–17:00、週一公休；芋粿巧下午常售完，要買趁早。",
+    since: 1869,
+    gmapsQuery: "阿瑞官粿店 新莊",
+  },
+  {
+    id: "newtaipei-lao-shun-xiang-bakery",
+    name: "老順香餅店",
+    city: "newtaipei",
+    area: "新莊",
+    center: { lat: 25.034, lng: 121.4524 },
+    cuisine: "bakery",
+    priceBand: 1,
+    tags: ["老店", "伴手禮", "在地人愛"],
+    mustOrder: ["金牌鳳梨酥", "鹹光餅"],
+    blurb:
+      "1870 年創立的新莊廟街餅舖，金牌鳳梨酥皮薄到近乎只吃餡，被稱為全台最資深的鳳梨酥之一。每年新莊大眾爺祭典的鹹光餅多半出自這裡，一次趕製數萬個，是跟著地方信仰走過百年的餅店。",
+    tips: "鳳梨酥可單片買；大眾爺祭典前後訂單爆量，去前先電話確認。",
+    since: 1870,
+    gmapsQuery: "老順香餅店 新莊",
+  },
+
+  // ---- 永和 ----
+  {
+    id: "newtaipei-world-soy-milk-king",
+    name: "世界豆漿大王",
+    city: "newtaipei",
+    area: "永和",
+    center: { lat: 25.0147, lng: 121.5145 },
+    cuisine: "breakfast",
+    priceBand: 1,
+    tags: ["老店", "觀光客必訪", "宵夜"],
+    mustOrder: ["炭燒豆漿", "燒餅油條", "小籠包"],
+    blurb:
+      "1955 年從中正橋頭攤車起家的豆漿店，是把「永和豆漿」名號帶向全台的源頭老店之一。帶炭燒焦香的熱豆漿配現擀的燒餅油條，二十四小時營業，深夜與清晨都有人專程過橋來吃一頓。",
+    tips: "24 小時營業；內用外帶分兩條隊伍，座位不多，深夜時段人也不少。",
+    since: 1955,
+    gmapsQuery: "世界豆漿大王 永和",
+  },
+  {
+    id: "newtaipei-a-guo-shrimp-thick-soup",
+    name: "阿國蝦仁羹",
+    city: "newtaipei",
+    area: "樂華夜市",
+    center: { lat: 25.0114, lng: 121.5109 },
+    cuisine: "street-food",
+    priceBand: 1,
+    tags: ["夜市", "老店", "排隊名店", "路邊攤"],
+    mustOrder: ["蝦仁羹", "綜合羹", "炒米粉"],
+    blurb:
+      "1965 年起在樂華夜市擺了六十年的羹攤，手工現做的蝦仁羹用柴魚湯底、勾芡清爽，蝦子大尾彈牙。肉羹、土魠魚羹全都一碗幾十元，晚餐過後隊伍常排到馬路邊，是永和人共同的夜市記憶。",
+    tips: "16:30 開攤、週一公休；想一次吃到三種料就點綜合羹。",
+    since: 1965,
+    gmapsQuery: "阿國蝦仁羹 永和",
+  },
+
+  // ---- 中和 ----
+  {
+    id: "newtaipei-kengai-coffea",
+    name: "圈外咖啡 Kengai Coffea",
+    city: "newtaipei",
+    area: "中和",
+    center: { lat: 24.995, lng: 121.5116 },
+    cuisine: "cafe",
+    priceBand: 2,
+    tags: ["冷氣內用", "在地人愛"],
+    mustOrder: ["手沖單品", "黑糖麻吉肉桂捲"],
+    blurb:
+      "中和四號公園旁的自家烘焙咖啡店，店名取自都築響一的《圈外編輯》，兩層老屋裡二樓的清水模階梯座位對著大面窗。店內自己烘豆也賣豆，手沖單品配自製肉桂捲，是中永和少見的專門店格局。",
+    tips: "平日不限時、假日限時 100 分鐘；有插座和 Wi-Fi。",
+    since: 2019,
+    gmapsQuery: "圈外咖啡 Kengai Coffea 中和",
+  },
+  {
+    id: "newtaipei-dian-cheng-yunnan",
+    name: "滇城雲南美食",
+    city: "newtaipei",
+    area: "中和",
+    center: { lat: 24.9846, lng: 121.5078 },
+    cuisine: "chinese",
+    priceBand: 1,
+    tags: ["老店", "在地人愛"],
+    mustOrder: ["雲南涼麵", "粑粑絲", "豌豆粉"],
+    blurb:
+      "華新街緬甸街上開了三十多年的雲南小吃店，老闆娘是來自緬甸臘戌的雲南華僑。粑粑絲、豌豆粉、稀豆粉這些雲滇庶民主食一應俱全，雲南涼麵拌自製醬汁酸香開胃，一碗幾十元就吃得到異鄉手藝。",
+    tips: "週四公休；華新街店家多半下午收攤，建議早午時段前往。",
+    gmapsQuery: "滇城雲南美食 中和",
+  },
+
+  // ---- 新店 ----
+  {
+    id: "newtaipei-bei-ya-duck-soup",
+    name: "北鴨鴨肉羹",
+    city: "newtaipei",
+    area: "新店",
+    center: { lat: 24.9626, lng: 121.5397 },
+    cuisine: "taiwanese",
+    priceBand: 1,
+    tags: ["米其林必比登", "老店", "在地人愛"],
+    mustOrder: ["鴨肉羹", "鴨肉飯"],
+    blurb:
+      "新店光明街經營二十多年的鴨肉羹專門店，土番鴨切薄片與洋蔥、筍絲同炒後熬羹，湯頭甘甜不膩。淋上鴨油與油蔥的鴨肉飯同樣搶手，2026 年入選米其林必比登，也是羽球金牌王齊麟的愛店。",
+    tips: "11:00–20:30、週三公休；羹可加麵飯米粉，內行會再配一碗鴨肉飯。",
+    gmapsQuery: "北鴨鴨肉羹 新店",
+  },
+  {
+    id: "newtaipei-qiao-tou-oyster-noodle",
+    name: "三重橋頭蚵仔麵線",
+    city: "newtaipei",
+    area: "新店",
+    center: { lat: 24.9623, lng: 121.5394 },
+    cuisine: "street-food",
+    priceBand: 1,
+    tags: ["老店", "排隊名店", "在地人愛", "路邊攤"],
+    mustOrder: ["綜合麵線", "大腸麵線"],
+    blurb:
+      "沿用三重橋頭麵線名號、在新店光明街開了三十年的麵線攤，只賣清麵線與蚵仔、大腸、綜合幾種組合。清晨五點就開賣，麵線裡加木耳與筍絲、湯頭勾芡輕微帶甜，常常下午不到就賣完收攤。",
+    tips: "05:00 開賣、週日公休；常提前賣完，早上去最保險，桌上九層塔自由加。",
+    gmapsQuery: "三重橋頭蚵仔麵線 新店",
+  },
+];

@@ -13,6 +13,8 @@ id 治理規則：
 |---|---|---|
 | taipei-a | taipei | 萬華/大同/中正/中山（含寧夏夜市）＋城中老字號 |
 | taipei-b | taipei | 大安/信義/松山/士林/北投（含士林、饒河夜市） |
+| newtaipei-a | newtaipei | 板橋/三重/新莊/中永和/新店（R3 首發） |
+| newtaipei-b | newtaipei | 淡水/九份/三峽/鶯歌/深坑/烏來（R3 首發） |
 | taichung | taichung | 全市 |
 | tainan | tainan | 全市（中西區為主） |
 | kaohsiung | kaohsiung | 全市 |
@@ -27,9 +29,9 @@ id 治理規則：
 
 ## Canonical IDs（內容定稿後回填）
 
-共 415 家（2026-07-15 R2 定稿）
+共 479 家（2026-07-15 R3 定稿）
 
-### taipei (64)
+### taipei (84)
 - `taipei-ay-chung-noodle` 阿宗麵線
 - `taipei-wangs-broth` 小王煮瓜
 - `taipei-yuan-fang-gua-bao` 源芳刈包
@@ -62,6 +64,16 @@ id 治理規則：
 - `taipei-ming-fu-taiwanese` 明福台菜海產
 - `taipei-mountain-sea-house` 山海樓
 - `taipei-tien-hsiang-lo` 天香樓
+- `taipei-shan-nei-chicken` 山內雞肉
+- `taipei-nanjichang-cart-shaobing` 無名推車燒餅
+- `taipei-atong-abao-sishen-soup` 阿桐阿寶四神湯
+- `taipei-alley-dachangjian` 巷仔內大腸煎
+- `taipei-mai-mian-yan-zai` 賣麵炎仔金泉小吃店
+- `taipei-minle-swordfish-rice-noodle` 民樂旗魚米粉湯
+- `taipei-tzu-yang-wagashi` 滋養製菓
+- `taipei-luguo-cafe` 爐鍋咖啡
+- `taipei-shuangyue-food` 双月食品社
+- `taipei-xiaozhang-guishandao` 小張龜山島現撈海產
 - `taipei-yongkang-beef-noodle` 永康牛肉麵
 - `taipei-dongmen-dumpling-house` 東門餃子館
 - `taipei-tianjin-scallion-pancake` 天津蔥抓餅
@@ -94,6 +106,48 @@ id 治理規則：
 - `taipei-baan-phadthai` 帕泰家
 - `taipei-samwon-garden` 三元花園韓式餐廳
 - `taipei-fujin-tree-taiwanese` 富錦樹台菜香檳
+- `taipei-yi-hsing-lou` 義興樓
+- `taipei-jingmei-tofu-pudding` 景美豆花
+- `taipei-san-lao-cun` 三老村
+- `taipei-nangang-laozhang-shaobing` 老張炭烤燒餅店
+- `taipei-shijia-guabao` 石家割包
+- `taipei-luoji-stir-fry` 駱記小炒
+- `taipei-rufous-coffee` RUFOUS COFFEE ROASTERS
+- `taipei-halal-beef-noodle` 清真中國牛肉麵食館
+- `taipei-sung-chu-restaurant` 宋廚菜館
+- `taipei-dachenji-noodle` 大陳記麵店
+
+### newtaipei (30)
+- `newtaipei-ukuko-oyster-noodle` 油庫口蚵仔麵線
+- `newtaipei-gao-ji-fried-squid` 高記生炒魷魚
+- `newtaipei-wang-ji-sesame-oil-chicken` 王記好吃麻油雞
+- `newtaipei-merci-vielle` Merci Vielle
+- `newtaipei-xiao-pan-cake` 小潘蛋糕坊
+- `newtaipei-jin-da-braised-pork-rice` 今大魯肉飯
+- `newtaipei-wan-li-meatball` 萬粒肉圓
+- `newtaipei-a-rui-guan-kueh` 阿瑞官粿店
+- `newtaipei-lao-shun-xiang-bakery` 老順香餅店
+- `newtaipei-world-soy-milk-king` 世界豆漿大王
+- `newtaipei-a-guo-shrimp-thick-soup` 阿國蝦仁羹
+- `newtaipei-kengai-coffea` 圈外咖啡 Kengai Coffea
+- `newtaipei-dian-cheng-yunnan` 滇城雲南美食
+- `newtaipei-bei-ya-duck-soup` 北鴨鴨肉羹
+- `newtaipei-qiao-tou-oyster-noodle` 三重橋頭蚵仔麵線
+- `newtaipei-laopai-agei` 老牌阿給
+- `newtaipei-xu-yi-fish-crisp` 許義魚酥
+- `newtaipei-a-xiang-shrimp-roll` 阿香蝦捲
+- `newtaipei-jiukan-28` 淡水九崁28
+- `newtaipei-a-gan-yi-taro-ball` 阿柑姨芋圓
+- `newtaipei-lai-a-po-taro-ball` 賴阿婆芋圓
+- `newtaipei-a-lan-mugwort-cake` 阿蘭草仔粿
+- `newtaipei-kuan-ge-about-coffee` 寬哥的關於咖啡
+- `newtaipei-fumeixuan-bakery` 福美軒餅舖
+- `newtaipei-dong-dao-diner` 東道飲食亭
+- `newtaipei-a-po-sushi` 阿婆壽司
+- `newtaipei-chang-ying-bawan` 彰鶯肉圓
+- `newtaipei-wang-shui-cheng-tofu` 王水成老店水成館
+- `newtaipei-gu-zao-cuo-tofu` 古早厝
+- `newtaipei-tayal-grandma` 泰雅婆婆美食店
 
 ### keelung (26)
 - `keelung-wu-ding-bian-cuo` 百年吳家鼎邊趖
@@ -261,7 +315,7 @@ id 治理規則：
 - `changhua-stable-fly-cafe` Stable Fly 穩定飛行模式
 - `changhua-zozo-claypot-cafe` 煮煮陶鍋咖啡
 
-### chiayi (38)
+### chiayi (52)
 - `chiayi-liu-lizhang-turkey-rice` 劉里長雞肉飯
 - `chiayi-kuo-family-turkey-rice` 郭家雞肉飯
 - `chiayi-taocheng-sanho-turkey-rice` 桃城三禾火雞肉飯
@@ -300,6 +354,20 @@ id 治理規則：
 - `chiayi-1961-seafood-grill` 1961海鮮碳烤
 - `chiayi-jiayuan-shantou-hotpot` 佳園汕頭火鍋
 - `chiayi-yisin-yakiniku` 壹心燒肉
+- `chiayi-dongshi-starfruit-ice` 東市楊桃冰
+- `chiayi-tsai-mutton-soup` 東市蔡家本產羊肉
+- `chiayi-hsiao-spring-roll` 蕭家春捲
+- `chiayi-hingga-stinky-tofu` 興加臭豆腐
+- `chiayi-dounaitan-wenhua` 嘉義豆奶攤
+- `chiayi-a-ji-eel-noodles` 阿吉鱔魚麵
+- `chiayi-taocheng-douhua` 桃城豆花
+- `chiayi-frozen-taro` 嘉義冷凍芋
+- `chiayi-old-brand-grass-carp` 正老牌草魚粥
+- `chiayi-linsen-donghe-sausage` 林森東和香腸
+- `chiayi-liu-tangyuan` 劉湯圓甜酒釀燒冷冰
+- `chiayi-shunyu-turkey-rice` 順裕火雞肉飯
+- `chiayi-dongmen-turkey-rice` 東門雞肉飯
+- `chiayi-good-morning-breakfast` 早安早點
 
 ### tainan (49)
 - `tainan-wenchang-beef-soup` 文章牛肉湯
