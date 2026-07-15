@@ -3,6 +3,7 @@ import type { Restaurant } from '../data/types'
 import { cityById } from '../data'
 import { CUISINE_META, priceLabel, gmapsUrl } from '../labels'
 import { similarTo } from '../recommend'
+import { rollRandom } from '../lib/filter'
 import { useT, useLang, fmt } from '../i18n'
 import { useUiStore } from '../ui'
 import { RateActions } from './RateActions'
@@ -11,10 +12,21 @@ import { RateActions } from './RateActions'
 export function DetailOverlay({ all, restaurant: r }: { all: Restaurant[]; restaurant: Restaurant }) {
   const closeDetail = useUiStore((s) => s.closeDetail)
   const openDetail = useUiStore((s) => s.openDetail)
+  const diceMode = useUiStore((s) => s.diceMode)
+  const { city: fCity, cuisine: fCuisine, price: fPrice, tag: fTag, query: fQuery } = useUiStore()
   const t = useT()
   const lang = useLang()
   const city = cityById.get(r.city)
   const similar = similarTo(all, r)
+
+  const rollNext = () => {
+    const pick = rollRandom(
+      all,
+      { city: fCity, cuisine: fCuisine, price: fPrice, tag: fTag, query: fQuery },
+      r.id,
+    )
+    if (pick) openDetail(pick.id, { dice: true })
+  }
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -57,6 +69,11 @@ export function DetailOverlay({ all, restaurant: r }: { all: Restaurant[]; resta
             </span>
           ))}
         </div>
+        {diceMode && (
+          <button className="dice-next-btn" onClick={rollNext}>
+            🎲 {t('diceNext')}
+          </button>
+        )}
         <a
           className="gmaps-btn"
           href={gmapsUrl(r.gmapsQuery)}

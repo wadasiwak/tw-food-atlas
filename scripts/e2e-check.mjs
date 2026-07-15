@@ -132,9 +132,17 @@ try {
   if (searchCount === 0 || searchCount >= total) fail(`搜尋「${targetName}」結果不合理 (${searchCount}/${total})`)
   await page.fill('.search-input', '')
 
-  // 10. 🎲 今晚吃什麼：點了要開詳情
+  // 10. 🎲 今晚吃什麼：點了要開詳情，且詳情內可「再抽一家」換店
   await page.click('.dice-btn')
   await page.waitForSelector('[data-testid="detail"]', { timeout: 3000 })
+  const diceFirst = await page.textContent('[data-testid="detail"] h2')
+  let changed = false
+  for (let i = 0; i < 5 && !changed; i++) {
+    await page.click('.dice-next-btn')
+    await page.waitForTimeout(200)
+    changed = (await page.textContent('[data-testid="detail"] h2')) !== diceFirst
+  }
+  if (!changed) fail('🎲 再抽一家 連抽 5 次店名都沒變')
   await page.keyboard.press('Escape')
 
   // 11. 口味輪廓：已有評分時「我的」tab 要顯示

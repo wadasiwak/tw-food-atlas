@@ -42,6 +42,7 @@ const STR = {
     geoDenied: '拿不到定位（可能被瀏覽器擋了），改用城市篩選吧。',
     diceBtn: '今晚吃什麼',
     diceTitle: '在目前篩選條件下隨機抽一家',
+    diceNext: '不喜歡，再抽一家',
     tasteTitle: '👅 你的口味輪廓',
     tasteHint: '從你的評分算出來的偏好，權重越高的越對你的味。',
     // Rate
@@ -118,6 +119,7 @@ const STR = {
     geoDenied: 'Location unavailable (blocked?). Try the city filter instead.',
     diceBtn: 'Surprise me',
     diceTitle: 'Random pick under current filters',
+    diceNext: 'Nah, roll again',
     tasteTitle: '👅 Your taste profile',
     tasteHint: 'Computed from your ratings — higher weight, more your thing.',
     ratedAll: 'All rated in this scope! You have rated {0} places 🎉',

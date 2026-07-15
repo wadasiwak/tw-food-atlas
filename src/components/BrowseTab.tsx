@@ -9,6 +9,7 @@ import { useT, useLang, fmt } from '../i18n'
 import { RestaurantCard, scoreColor } from './RestaurantCard'
 import { hasWebGL } from '../lib/webgl'
 import { haversineKm } from '../lib/geo'
+import { filterRestaurants, rollRandom } from '../lib/filter'
 import { RateActions } from './RateActions'
 
 // maplibre 很肥，切到地圖模式才載
@@ -27,19 +28,7 @@ export function BrowseTab({ all }: { all: Restaurant[] }) {
   const [locating, setLocating] = useState(false)
 
   const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase()
-    const base = all.filter(
-      (r) =>
-        (!city || r.city === city) &&
-        (!cuisine || r.cuisine === cuisine) &&
-        (!price || r.priceBand === price) &&
-        (!tag || r.tags.includes(tag)) &&
-        (!q ||
-          r.name.toLowerCase().includes(q) ||
-          r.area.toLowerCase().includes(q) ||
-          r.mustOrder.some((m) => m.toLowerCase().includes(q)) ||
-          r.blurb.toLowerCase().includes(q)),
-    )
+    const base = filterRestaurants(all, { city, cuisine, price, tag, query })
     if (myPos && myPos !== 'denied') {
       return [...base].sort(
         (a, b) => haversineKm(myPos, a.center) - haversineKm(myPos, b.center),
@@ -68,9 +57,8 @@ export function BrowseTab({ all }: { all: Restaurant[] }) {
   }
 
   const rollDice = () => {
-    if (!filtered.length) return
-    const pick = filtered[Math.floor(Math.random() * filtered.length)]
-    openDetail(pick.id)
+    const pick = rollRandom(all, { city, cuisine, price, tag, query })
+    if (pick) openDetail(pick.id, { dice: true })
   }
 
   const webgl = hasWebGL()
