@@ -32,9 +32,9 @@ id 治理規則：
 
 ## Canonical IDs（內容定稿後回填）
 
-共 479 家（2026-07-15 R3 定稿）
+共 784 家（2026-07-19 R4 定稿）
 
-### taipei (84)
+### taipei (204)
 - `taipei-ay-chung-noodle` 阿宗麵線
 - `taipei-wangs-broth` 小王煮瓜
 - `taipei-yuan-fang-gua-bao` 源芳刈包
@@ -119,8 +119,128 @@ id 治理規則：
 - `taipei-halal-beef-noodle` 清真中國牛肉麵食館
 - `taipei-sung-chu-restaurant` 宋廚菜館
 - `taipei-dachenji-noodle` 大陳記麵店
+- `taipei-lailai-dumplings` 徠徠水餃
+- `taipei-xiaodi-rice-tube` 曉迪筒仔米糕
+- `taipei-badong-tangyuan` 八棟圓仔湯
+- `taipei-wuwang-runbing` 吾旺再季潤餅捲
+- `taipei-achama-sweet-soup` 阿猜嬤甜湯
+- `taipei-yuanzu-pepper-bun` 福州元祖胡椒餅
+- `taipei-dingji-tianbula` 頂級甜不辣
+- `taipei-xiaonan-zhengji-wagui` 小南鄭記台南碗粿
+- `taipei-longdu-ice` 龍都冰菓專業家
+- `taipei-huainian-aiyu-jelly` 懷念愛玉冰
+- `taipei-jianhong-beef-noodle` 建宏牛肉麵
+- `taipei-meiguanyuan` 美觀園
+- `taipei-lao-tian-lu-luwei` 老天祿滷味
+- `taipei-nanmei-coffee` 南美咖啡
+- `taipei-laopai-beef-ramen` 老牌牛肉拉麵大王
+- `taipei-hoshing-pastry` 合興糕糰店
+- `taipei-yichang-yufang` 億長御坊
+- `taipei-jinfeng-braised-pork-rice` 金峰滷肉飯
+- `taipei-dingyuan-soy-milk` 鼎元豆漿
+- `taipei-serenity-vegetarian` 祥和蔬食料理
+- `taipei-huang-mama-rice-noodle` 黃媽媽米粉湯
+- `taipei-jiangji-dongmen-tofu-pudding` 江記東門豆花
+- `taipei-linjia-ganmian` 林家乾麵
+- `taipei-lanjia-guabao` 藍家割包
+- `taipei-jingmei-shengjianbao` 景美上海生煎包
+- `taipei-achang-mianxian` 阿昌麵線臭豆腐
+- `taipei-wenshan-coffee` 聞山咖啡
+- `taipei-ruins-coffee` Ruins Coffee Roasters
+- `taipei-yaoyue-teahouse` 邀月茶坊
+- `taipei-cabin-waffle-nccu` 小木屋鬆餅 政大店
+- `taipei-yongle-mitaimu` 永樂米苔目
+- `taipei-miaokou-sishen-soup` 妙口四神湯肉包專賣店
+- `taipei-lee-ting-xiang-bakery` 李亭香餅店
+- `taipei-cofe-dihua` COFE
+- `taipei-yeh-family-pork-congee` 葉家肉粥
+- `taipei-a-gui-yi-pork-rib-soup` 阿桂姨原汁排骨湯
+- `taipei-yi-mian-wang` 意麵王
+- `taipei-jia-er-zui` 呷二嘴
+- `taipei-xiaoqi-shokudo` 小器食堂
+- `taipei-illumination-books` 浮光書店
+- `taipei-a-chuan-oyster-noodle` 阿川蚵仔麵線
+- `taipei-qingguang-red-bean-cake` 晴光紅豆餅
+- `taipei-huang-ji-braised-pork-rice` 黃記魯肉飯
+- `taipei-a-tu-sesame-oil-chicken` 阿圖麻油雞
+- `taipei-a-fu-seafood-congee` 阿富海鮮粥
+- `taipei-feiqianwu-unagi` 肥前屋
+- `taipei-hamamatsuya-unagi` 濱松屋
+- `taipei-fuda-steamed-dumplings` 福大蒸餃館
+- `taipei-melange-cafe` 米朗琪咖啡館
+- `taipei-sanduo-house-sashimi` 三多屋爸爸嘴
+- `taipei-ji-jia-zhuang` 雞家莊
+- `taipei-jin-din-rou` 京鼎樓
+- `taipei-liang-ji-chicken-rice` 梁記嘉義雞肉飯
+- `taipei-fu-ba-wang-pork-knuckle` 富霸王豬腳
+- `taipei-fika-fika-cafe` Fika Fika Cafe
+- `taipei-xiao-liu-shokudo` 小六食堂
+- `taipei-a-guo-qie-zai-mian` 阿國切仔麵
+- `taipei-xia-gang-ye-mutton` 下港吔羊肉專賣店
+- `taipei-chongqing-soy-milk` 重慶豆漿
+- `taipei-a-jiao-hong-shao-rou` 阿角紅燒肉
+- `taipei-red-flower-salted-chicken` 紅花麻辣鹽水雞
+- `taipei-yakou-stinky-tofu` 雅口天香臭豆腐
+- `taipei-liang-ji-luwei` 梁記滷味
+- `taipei-tonghua-meatball` 通化肉圓
+- `taipei-mingyue-tangbao` 明月湯包
+- `taipei-zhanji-spicy-hotpot` 詹記麻辣火鍋 敦南店
+- `taipei-smoothie-house` 思慕昔
+- `taipei-hao-kung-tao-golden-chicken` 好公道金雞園
+- `taipei-xiulan-restaurant` 秀蘭小館
+- `taipei-qingtian-76` 青田七六
+- `taipei-ecole-cafe` 學校咖啡館
+- `taipei-liao-beef-noodle` 廖家牛肉麵
+- `taipei-liu-pin-restaurant` 六品小館
+- `taipei-shiyun-fried-chicken` 師園鹽酥雞
+- `taipei-lantern-luwei` 燈籠滷味
+- `taipei-eastern-ice-store` 東區粉圓
+- `taipei-zilin-dumpling` 紫琳蒸餃館
+- `taipei-sao-douhua` 騷豆花
+- `taipei-solo-pasta` Solo Pasta
+- `taipei-steak-inn` 雅室牛排
+- `taipei-the-diner` the Diner 樂子
+- `taipei-toasteria-cafe` Toasteria Cafe 敦南
+- `taipei-lawrys-prime-rib` 勞瑞斯牛肋排餐廳
+- `taipei-wildwood` Wildwood
+- `taipei-bawu-tiandi` 捌伍添第
+- `taipei-shijia-sesame-oil-kidney` 施家麻油腰花
+- `taipei-nancun-eatery` 南村小吃店
+- `taipei-hutao-rice-noodle-soup` 胡饕米粉湯
+- `taipei-mu-ji-beef-noodle` 穆記牛肉麵
+- `taipei-zhenfang-charcoal-toast` 真芳碳烤吐司
+- `taipei-yue-jia-xiaoguan` 岳家小館
+- `taipei-zhen-hao-jia-pho` 珍好呷越南河粉
+- `taipei-yipin-shanxi-noodle` 一品山西刀削麵之家
+- `taipei-viet-phu-banh-mi` 越富越南法國麵包
+- `taipei-chen-ji-fried-chicken` 陳季炸雞
+- `taipei-tsai-yuan-yi-black-tea` 蔡元益紅茶
+- `taipei-man-ke-wu-ramen` 滿客屋拉麵
+- `taipei-su-jia-beef-noodle` 粟家牛肉麵
+- `taipei-a-cai-potsticker` 阿財鍋貼水餃專賣店
+- `taipei-shipai-noname-egg-crepe` 石牌無名手工蛋餅
+- `taipei-zhongchenghao-oyster-omelette` 忠誠號蚵仔煎
+- `taipei-boss-shih-stinky-tofu` 施老闆麻辣臭豆腐
+- `taipei-chen-jia-cold-noodle` 陳家涼麵
+- `taipei-dongyin-eatery` 東引小吃店
+- `taipei-minsheng-fried-rice` 民生炒飯專賣店
+- `taipei-xinzhong-shengjianbao` 新中街上海生煎包
+- `taipei-minsheng-gongyu-cafe` 民生工寓 coffee essential
+- `taipei-tt-restaurant` T+T
+- `taipei-xiao-beiping-noodle` 小北平麵食館
+- `taipei-sihai-yijia` 四海一家
+- `taipei-all-day-roasting` All Day Roasting Company
+- `taipei-zhu-da-lang-pig-blood-cake` 豬大郎豬血糕
+- `taipei-ya-xiang-bao-duck` 鴨香飽
+- `taipei-antipodean-coffee` The Antipodean Specialty Coffee
+- `taipei-donghu-wang-dumpling` 東湖王家水餃館
+- `taipei-a-fu-tofu-pudding` 阿富豆花
+- `taipei-swagger-mummy-dumpling` 跩媽咪手工水餃
+- `taipei-a-chun-smoked-goose` 阿春燻鵝肉專賣店
+- `taipei-ama-rice-noodle-soup` 阿嬤的米粉湯
+- `taipei-laojuancun-pancake` 老眷村煎餅
 
-### newtaipei (30)
+### newtaipei (110)
 - `newtaipei-ukuko-oyster-noodle` 油庫口蚵仔麵線
 - `newtaipei-gao-ji-fried-squid` 高記生炒魷魚
 - `newtaipei-wang-ji-sesame-oil-chicken` 王記好吃麻油雞
@@ -136,6 +256,36 @@ id 治理規則：
 - `newtaipei-dian-cheng-yunnan` 滇城雲南美食
 - `newtaipei-bei-ya-duck-soup` 北鴨鴨肉羹
 - `newtaipei-qiao-tou-oyster-noodle` 三重橋頭蚵仔麵線
+- `newtaipei-oyster-house` 蚵仔之家
+- `newtaipei-banqiao-xiaolongbao` 板橋小籠包
+- `newtaipei-huai-nian-pork-rib-soup` 懷念排骨酥湯
+- `newtaipei-lin-yuan-big-meatball` 林員大粒肉圓
+- `newtaipei-lao-cao-wonton` 老曹餛飩
+- `newtaipei-xie-jia-pork-geng` 黃石謝家肉羹油飯
+- `newtaipei-tai-he-soy-milk` 太和豆漿
+- `newtaipei-tian-tian-douhua` 天天豆花
+- `newtaipei-yang-jia-wheel-cake` 楊家車輪餅
+- `newtaipei-a-wen-wonton-tangyuan` 阿文餛飩湯圓
+- `newtaipei-ming-hong-oyster-soup` 明宏蚵仁湯
+- `newtaipei-ke-si-hai-oyster-omelette` 蚵四海小吃
+- `newtaipei-wu-deng-jiang-pork-knuckle` 五燈獎豬腳魯肉飯
+- `newtaipei-dian-xiao-er-braised-pork` 店小二魯肉飯
+- `newtaipei-lian-wu-braised-pork-rice` 蓮霧滷肉飯
+- `newtaipei-weng-yu-mei-maltose` 翁裕美商行
+- `newtaipei-ciyou-popiah` 新莊廟街夜市潤餅捲
+- `newtaipei-miaojie-salty-tangyuan` 古早味鹹湯圓
+- `newtaipei-jia-wei-xian-sesame-chicken` 嘉味仙麻油雞腿庫飯
+- `newtaipei-xia-gang-migao-rib-soup` 下港米糕排骨酥湯
+- `newtaipei-a-ba-taro-ball` 阿爸の芋圓
+- `newtaipei-yong-xin-soy-milk` 永新豆漿
+- `newtaipei-yonghe-jiaxiang-soy-milk` 永和佳香豆漿
+- `newtaipei-li-yuan-halal-roti` 786李園清真小吃
+- `newtaipei-yuan-bao-milk-tea` 沅保奶茶店
+- `newtaipei-huang-jia-mian-xian` 黃家大腸蚵仔麵線
+- `newtaipei-nanshijiao-duck-head` 南勢角東山鴨頭
+- `newtaipei-superman-seabass-soup` 超人鱸魚
+- `newtaipei-qizhang-rice-noodle-soup` 七張米粉湯
+- `newtaipei-bitan-goose` 碧潭橋頭鵝肉
 - `newtaipei-laopai-agei` 老牌阿給
 - `newtaipei-xu-yi-fish-crisp` 許義魚酥
 - `newtaipei-a-xiang-shrimp-roll` 阿香蝦捲
@@ -151,6 +301,56 @@ id 治理規則：
 - `newtaipei-wang-shui-cheng-tofu` 王水成老店水成館
 - `newtaipei-gu-zao-cuo-tofu` 古早厝
 - `newtaipei-tayal-grandma` 泰雅婆婆美食店
+- `newtaipei-three-sisters-agei` 三姐妹阿給
+- `newtaipei-huwei-douhua` 淡水滬尾豆花店
+- `newtaipei-a-po-iron-egg` 阿婆鐵蛋
+- `newtaipei-san-xie-cheng-bakery` 三協成餅舖
+- `newtaipei-hei-dian-pork-rib-rice` 黑殿飯店
+- `newtaipei-ancre-cafe` Ancre café 安克黑咖啡
+- `newtaipei-between-teahouse` 之間 茶食器
+- `newtaipei-zhang-ji-fish-ball` 張記傳統魚丸
+- `newtaipei-head-nurse-lu-wei` 護理長的店
+- `newtaipei-a-mei-tea-house` 阿妹茶樓
+- `newtaipei-shi-bu-yan` 食不厭
+- `newtaipei-sanxia-spring-water-douhua` 山泉水手工豆花
+- `newtaipei-honaichuan-soy` 禾乃川國產豆製所
+- `newtaipei-ama-e-douhua` 阿嬤ㄟ豆花
+- `newtaipei-houdao-diner` 厚道飲食店
+- `newtaipei-fugui-taoyuan` 富貴陶園
+- `newtaipei-da-tuan-yuan` 大團園
+- `newtaipei-jin-da-ding-tofu` 金大鼎串烤香豆腐
+- `newtaipei-yage-boar-sausage` 雅各原住民山豬肉香腸
+- `newtaipei-gao-jia-iced-egg` 高家冰溫泉蛋
+- `newtaipei-meimei-eatery` 美美飲食店
+- `newtaipei-wang-shi-tofu` 王氏豆腐
+- `newtaipei-hong-gui-noodle` 紅龜麵店
+- `newtaipei-yang-jia-chicken-roll` 楊家雞捲
+- `newtaipei-rong-shu-xia-rice-noodle` 榕樹下米粉湯
+- `newtaipei-tian-ding-noodle` 添丁切仔麵
+- `newtaipei-da-miao-kou-noodle` 大廟口切仔麵
+- `newtaipei-zong-zan-scallion-pancake` 總讚手作蔥餅
+- `newtaipei-long-feng-tang-bakery` 龍鳳堂餅舖
+- `newtaipei-wugu-salty-congee` 伍股鹹粥
+- `newtaipei-qigan-lake-farm` 旗竿湖農場
+- `newtaipei-quan-xing-mee-sua` 全興蚵仔大腸麵線
+- `newtaipei-taishan-stone-corn` 泰山碳烤石頭玉米
+- `newtaipei-qingqing-restaurant` 青青餐廳
+- `newtaipei-qingshui-bridge-noodle` 清水橋頭麵店
+- `newtaipei-a-cheng-goose` 阿城鵝肉 土城總店
+- `newtaipei-shulin-black-meatball` 樹林黑肉圓
+- `newtaipei-shulin-red-mee-sua` 樹林紅麵線
+- `newtaipei-she-jia-mussel-king` 佘家孔雀蛤大王
+- `newtaipei-sisters-twin-donut` 姊妹雙胞胎
+- `newtaipei-jinfeng-glass-noodle` 金豊八寶冬粉
+- `newtaipei-liao-red-turtle-cake` 廖家紅龜店
+- `newtaipei-xizhi-alley-rice-noodle` 巷仔內米粉湯
+- `newtaipei-qingguang-eatery` 晴光小吃
+- `newtaipei-long-wonton-cold-noodle` 龍抄手涼麵
+- `newtaipei-lao-zhan-yuan-ramen` 老占元拉麵大王
+- `newtaipei-a-xia-longfengtui` 阿霞龍鳳腿
+- `newtaipei-bao-yun-taro-ball` 保雲芋圓
+- `newtaipei-jinbaoli-duck` 金包里鴨肉
+- `newtaipei-zhi-wei-xiang-corn` 知味鄉玉米
 
 ### keelung (26)
 - `keelung-wu-ding-bian-cuo` 百年吳家鼎邊趖
@@ -242,7 +442,7 @@ id 治理規則：
 - `yilan-mingcao-coffee` 鳴草咖啡自家烘焙館
 - `yilan-mr-brown-castle` 伯朗咖啡城堡一館
 
-### taichung (44)
+### taichung (79)
 - `taichung-shanhe-lu-rou-fan` 山河魯肉飯
 - `taichung-wang-radish-cake` 王記菜頭粿糯米腸
 - `taichung-mao-chuan-meatball` 茂川肉丸
@@ -287,6 +487,41 @@ id 治理規則：
 - `taichung-karuizawa-hotpot` 輕井澤鍋物 公益店
 - `taichung-qin-yuan-chun` 沁園春
 - `taichung-minimal` MINIMAL
+- `taichung-space-red-tea` 太空紅茶冰
+- `taichung-lequn-frozen-taro` 樂群冷凍芋
+- `taichung-fifth-market-oyster-congee` 第五市場蚵仔粥
+- `taichung-chiang-wonton` 江家餛飩 向上市場店
+- `taichung-xiangshang-fried-snacks` 向上市場炸粿
+- `taichung-21-stinky-tofu` 21臭豆腐
+- `taichung-a-yue-red-tea` 阿月紅茶冰
+- `taichung-sanshi-teahouse` 三時茶房
+- `taichung-hausinc-cafe` HAUSINC CAFE
+- `taichung-hsin-fa-ting-bean-ice` 幸發亭蜜豆冰 健行店
+- `taichung-wuji-crispy-meatball` 吳記脆皮肉圓
+- `taichung-peng-cheng-tang` 彭城堂
+- `taichung-zhenpin-snacks` 珍品小吃
+- `taichung-taizu-squid-thick-soup` 模範街太祖魷魚焿
+- `taichung-kohi-in` 珈琲院
+- `taichung-laffection` 法森小館
+- `taichung-vwi-coffee` VWI COFFEE HOUSE
+- `taichung-for-farm-burger-park` 田樂 小公園店
+- `taichung-harumaru-bun` 春丸餐包製作所 街邊店
+- `taichung-liang-popo-stinky-tofu` 梁婆婆臭豆腐
+- `taichung-sisui-roastery` 細水焙煎所
+- `taichung-fu-zhuang-yuan-pork-knuckle` 富狀元豬腳
+- `taichung-kungfu-shanghai-fishball` 功夫上海手工魚丸
+- `taichung-oriental-dragon` 東方龍
+- `taichung-fu-gui-ting-duck` 富貴亭飲食店
+- `taichung-fanji-straw-rice` 范記金之園草袋飯
+- `taichung-li-hai-braised-pork` 李海魯肉飯
+- `taichung-gao-jia-yi-mian` 高家意麵
+- `taichung-donghai-gua-bao` 東海刈包大王
+- `taichung-dondon-taro-ball` 東東芋圓
+- `taichung-laoyuzai-taro-ball` 老芋仔芋圓
+- `taichung-dongshanzhan-chicken` 東山棧甕缸雞
+- `taichung-lin-jin-sheng-xiang` 林金生香
+- `taichung-a-you-noodles` 阿有麵店
+- `taichung-shalu-meatball-fu` 沙鹿肉圓福
 
 ### changhua (28)
 - `changhua-a-zhang-ba-wan` 阿璋肉圓
@@ -372,7 +607,7 @@ id 治理規則：
 - `chiayi-dongmen-turkey-rice` 東門雞肉飯
 - `chiayi-good-morning-breakfast` 早安早點
 
-### tainan (49)
+### tainan (84)
 - `tainan-wenchang-beef-soup` 文章牛肉湯
 - `tainan-shijingjiu-beef-soup` 石精臼牛肉湯
 - `tainan-acun-beef-soup` 阿村第二代牛肉湯
@@ -422,8 +657,43 @@ id 治理規則：
 - `tainan-good-hunan-cuisine` 有你真好 湘菜沙龍
 - `tainan-jinxia-restaurant` 錦霞樓
 - `tainan-gyugozou-beef` 牛五蔵
+- `tainan-yige-beef-soup` 億哥牛肉湯
+- `tainan-liuqian-beef-soup` 六千牛肉湯
+- `tainan-acai-beef-soup` 阿財牛肉湯
+- `tainan-hongniu-beef-hotpot` 鴻牛溫體牛肉鍋
+- `tainan-wang-fish-skin` 王氏魚皮
+- `tainan-maoji-black-douhua` 茂記安平黑豆花
+- `tainan-yongtaixing-mijian` 林永泰興蜜餞行
+- `tainan-elate-pudding` 依蕾特布丁
+- `tainan-guiji-food-house` 貴記美食文化館
+- `tainan-yamuliao-apo-pudding` 鴨母寮阿婆布丁
+- `tainan-yamuliao-charcoal-noodles` 鴨母寮市場炭火麵
+- `tainan-shuixiangong-migao` 水仙宮粽葉米糕
+- `tainan-miantiaowang-seafood-noodles` 麵條王海產麵
+- `tainan-ershixiong-luwei` 二師兄古早味滷味
+- `tainan-liandetang-crackers` 連得堂餅家
+- `tainan-xiaomaowu-guoshao` 小茂屋
+- `tainan-kaiyuan-milkfish` 開元路無名虱目魚
+- `tainan-roubo-turkey-rice` 肉伯火雞肉飯
+- `tainan-laozeng-lamb` 老曾羊肉
+- `tainan-yuejin-porridge` 悅津鹹粥
+- `tainan-dayong-porridge` 大勇街無名鹹粥
+- `tainan-yidian-guabao` 一點刈包
+- `tainan-fucheng-saokao-bbq` 府城騷烤家
+- `tainan-shengli-breakfast` 勝利早點
+- `tainan-narrow-door-cafe` 窄門咖啡
+- `tainan-a-room-cafe` a Room 房間咖啡
+- `tainan-sun-hong-ho-cafe` 順風號
+- `tainan-shibamao-teahouse` 十八卯茶屋
+- `tainan-luji-baozi` 祿記包子
+- `tainan-huaijiu-tofu-ice` 懷舊小棧豆腐冰
+- `tainan-shuangsheng-mungbean-milk` 双生綠豆沙牛奶
+- `tainan-borentang-herbal` 博仁堂中藥舖
+- `tainan-shataogong-caizong` 沙淘宮菜粽
+- `tainan-xiajia-fish-noodles` 夏家手工魚麵
+- `tainan-ahui-charcoal-oden` 阿輝黑輪
 
-### kaohsiung (44)
+### kaohsiung (79)
 - `kaohsiung-duck-zhen` 鴨肉珍
 - `kaohsiung-rouzong-tai` 肉粽泰
 - `kaohsiung-gang-yuan-beef-noodles` 港園牛肉麵
@@ -468,6 +738,41 @@ id 治理規則：
 - `kaohsiung-goood-time` 龜時間
 - `kaohsiung-bai-yu-lou` 白玉樓
 - `kaohsiung-gen` 雋 GEN
+- `kaohsiung-a-jin-qie-zai-mian` 阿進切仔麵
+- `kaohsiung-lekami-noodles` 樂卡咪長腳麵食
+- `kaohsiung-aloha-luwei` 阿囉哈滷味
+- `kaohsiung-beigang-tsai-rice-tube` 北港蔡三代筒仔米糕
+- `kaohsiung-shuang-fei-milk-tea` 双妃奶茶
+- `kaohsiung-da-pang-lard-noodles` 大胖豬油拌麵
+- `kaohsiung-tian-ji-soy-milk` 田記豆漿
+- `kaohsiung-sanlang-bakery` 三郎麵包廠
+- `kaohsiung-da-kou-pang-toast` 大ㄎㄡ胖碳烤三明治
+- `kaohsiung-lao-zhou-hot-mochi` 老周冷熱飲
+- `kaohsiung-liao-jia-olen` 廖家黑輪
+- `kaohsiung-xin-da-gang-sausage` 新大港香腸大腸
+- `kaohsiung-shanghai-shengjian-tangbao` 上海生煎湯包
+- `kaohsiung-guo-jia-braised-pork-rice` 郭家肉燥飯
+- `kaohsiung-san-dai-spring-rolls` 三代春捲
+- `kaohsiung-mediya-burger` 美迪亞漢堡店
+- `kaohsiung-lao-pai-white-sugar-kueh` 老牌白糖粿
+- `kaohsiung-xiao-lin-chicken-rice` 小林雞肉飯
+- `kaohsiung-jin-cheng-duck` 金城鴨肉專門店
+- `kaohsiung-da-niu-beef-noodles` 大牛牛肉麵
+- `kaohsiung-feng-xing-mian-xian` 鳳興麵線
+- `kaohsiung-you-jia-chishan-kueh` 尤家赤山粿
+- `kaohsiung-lin-tian-sheng-braised-pork-rice` 林天生肉燥飯
+- `kaohsiung-lao-zhang-aiyu-ice` 老張愛玉冰
+- `kaohsiung-yang-bao-bao-steamed-dumplings` 北平楊寶寶蒸餃
+- `kaohsiung-wan-er-seafood` 萬二小吃店
+- `kaohsiung-douliu-ice-city` 斗六冰城
+- `kaohsiung-jin-sheng-chun-seafood` 金聖春海產
+- `kaohsiung-black-marlin-fishball` 黑旗魚丸大王
+- `kaohsiung-sea-of-ice` 渡船頭海之冰
+- `kaohsiung-wang-jia-shaobing` 海青王家燒餅店
+- `kaohsiung-zhong-wai-bakery` 中外餅舖
+- `kaohsiung-xing-fu-alley` 杏福巷子
+- `kaohsiung-guo-mao-lai-lai-soy-milk` 果貿來來豆漿
+- `kaohsiung-ming-shan-herbal-tea` 明山青草茶
 
 ### donggang (18)
 - `donggang-wang-jiang-bluefin-sashimi` 王匠黑鮪魚生魚片
