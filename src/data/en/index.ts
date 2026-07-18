@@ -5,6 +5,7 @@ import type { EnRestaurantText } from "../types";
 import { en as taipeiA } from "./taipei-a";
 import { en as taipeiB } from "./taipei-b";
 import { en as newtaipeiA } from "./newtaipei-a";
+import { en as newtaipeiB } from "./newtaipei-b";
 import { en as newtaipeiC } from "./newtaipei-c";
 import { en as keelung } from "./keelung";
 import { en as hsinchu } from "./hsinchu";
@@ -21,6 +22,7 @@ export const EN_ALL: Record<string, EnRestaurantText> = {
   ...taipeiA,
   ...taipeiB,
   ...newtaipeiA,
+  ...newtaipeiB,
   ...newtaipeiC,
   ...keelung,
   ...hsinchu,
