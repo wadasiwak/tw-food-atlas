@@ -64,6 +64,7 @@ export interface CityDef {
   /** kebab-case 通行拼音, e.g. "chiayi". */
   id: string;
   name: string; // "嘉義"
+  nameEn: string; // "Chiayi"
   emoji: string;
   region: Region;
   /** Bounding box used by the content validator and map fitting. */
@@ -98,4 +99,37 @@ export interface Restaurant {
    * UI 組成 https://www.google.com/maps/search/?api=1&query=… 供查營業時間與評論。
    */
   gmapsQuery: string;
+}
+
+/**
+ * 店家配圖（Wikimedia Commons 熱連結）。不放在 Restaurant 上——
+ * 由 scripts/build-image-data.mjs 產出 src/data/extras/images.ts，以 id join，
+ * 且走 dynamic import（784 筆不進主 chunk）。
+ * 授權白名單：CC0 / Public domain / CC BY / CC BY-SA（NC/ND 一律不收），
+ * CC BY 系列依法必須署名——UI 詳情頁的 credit 塊不可拿掉。
+ */
+export interface StoreImage {
+  /** upload.wikimedia.org 的縮圖 URL（960px 級） */
+  src: string;
+  author: string;
+  license: string;
+  licenseUrl: string;
+  /** Commons File: 頁 */
+  sourceUrl: string;
+  /** photo = 該店實拍；dish = 菜色示意圖（UI 必須標「示意圖」） */
+  kind: "photo" | "dish";
+}
+
+/**
+ * 店家內容英譯（src/data/en/ 鏡像檔，以 id 對齊，lazy-load）。
+ * 缺哪欄就回退中文；mustOrder 必須與中文版等長、逐索引對應。
+ * gmapsQuery 恆用中文——Google Maps 在台灣用中文查更準，不翻。
+ */
+export interface EnRestaurantText {
+  name: string;
+  area: string;
+  blurb: string;
+  /** 中文版有 tips 才能有；中文版沒有就省略。 */
+  tips?: string;
+  mustOrder: string[];
 }

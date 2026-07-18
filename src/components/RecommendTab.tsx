@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import type { Restaurant } from '../data/types'
 import { CITIES } from '../data'
+import { cityLabel } from '../labels'
 import { useRatingStore } from '../store'
 import { recommend } from '../recommend'
 import { useT, useLang, fmt } from '../i18n'
@@ -38,7 +39,7 @@ export function RecommendTab({ all }: { all: Restaurant[] }) {
           {CITIES.map((c) => (
             <option key={c.id} value={c.id}>
               {t('scopeCity')}
-              {c.emoji} {c.name}
+              {c.emoji} {cityLabel(c, lang)}
             </option>
           ))}
         </select>

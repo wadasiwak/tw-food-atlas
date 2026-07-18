@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { Restaurant } from '../data/types'
 import { CITIES, cityById } from '../data'
-import { CUISINE_META, PRICE_META } from '../labels'
+import { CUISINE_META, PRICE_META, cityLabel } from '../labels'
 import { useRatingStore } from '../store'
-import { useT, fmt } from '../i18n'
+import { useT, useLang, fmt } from '../i18n'
+import { useLocalizer } from '../lib/localize'
 import { scoreColor } from './RestaurantCard'
 
 // 一次一張卡快速評分。順序做輕度洗牌（同城市內分散菜系），
@@ -11,6 +12,8 @@ import { scoreColor } from './RestaurantCard'
 export function RateTab({ all }: { all: Restaurant[] }) {
   const { ratings, skipped, rate, markSkipped, watchlist, toggleWatchlist } = useRatingStore()
   const t = useT()
+  const lang = useLang()
+  const loc = useLocalizer()
   const [scopeCity, setScopeCity] = useState('')
   const [cursor, setCursor] = useState(0)
 
@@ -41,6 +44,7 @@ export function RateTab({ all }: { all: Restaurant[] }) {
   }, [all, ratings, skipped, scopeCity])
 
   const current = pool[Math.min(cursor, pool.length - 1)]
+  const cur = current ? loc(current) : undefined
 
   useEffect(() => {
     if (cursor >= pool.length) setCursor(0)
@@ -67,37 +71,37 @@ export function RateTab({ all }: { all: Restaurant[] }) {
           <option value="">{t('allCities')}</option>
           {CITIES.map((c) => (
             <option key={c.id} value={c.id}>
-              {c.emoji} {c.name}
+              {c.emoji} {cityLabel(c, lang)}
             </option>
           ))}
         </select>
         <span className="kbd-hint">{t('kbdHint')}</span>
       </div>
 
-      {!current ? (
+      {!cur ? (
         <div className="empty-hint">{fmt(t('ratedAll'), ratedCount)}</div>
       ) : (
-        <div className="rate-card" data-id={current.id}>
-          <div className="rate-emoji">{CUISINE_META[current.cuisine].emoji}</div>
-          <h2>{current.name}</h2>
+        <div className="rate-card" data-id={cur.id}>
+          <div className="rate-emoji">{CUISINE_META[cur.cuisine].emoji}</div>
+          <h2>{cur.name}</h2>
           <div className="card-sub">
-            {cityById.get(current.city)?.emoji} {cityById.get(current.city)?.name} ·{' '}
-            {current.area} · {PRICE_META[current.priceBand].sign}
+            {cityById.get(cur.city)?.emoji} {cityLabel(cityById.get(cur.city), lang)} ·{' '}
+            {cur.area} · {PRICE_META[cur.priceBand].sign}
           </div>
           <div className="card-must">
-            {current.mustOrder.map((m) => (
+            {cur.mustOrder.map((m) => (
               <span className="must-chip" key={m}>
                 {m}
               </span>
             ))}
           </div>
-          <p className="card-blurb">{current.blurb}</p>
+          <p className="card-blurb">{cur.blurb}</p>
           <div className="score-buttons">
             {Array.from({ length: 10 }, (_, i) => i + 1).map((s) => (
               <button
                 key={s}
                 style={{ '--score-color': scoreColor(s) } as React.CSSProperties}
-                onClick={() => rate(current.id, s)}
+                onClick={() => rate(cur.id, s)}
               >
                 {s}
               </button>
@@ -105,13 +109,13 @@ export function RateTab({ all }: { all: Restaurant[] }) {
           </div>
           <div className="rate-actions">
             <button
-              className={current.id in watchlist ? 'wl-btn on' : 'wl-btn'}
-              onClick={() => toggleWatchlist(current.id)}
+              className={cur.id in watchlist ? 'wl-btn on' : 'wl-btn'}
+              onClick={() => toggleWatchlist(cur.id)}
             >
-              {current.id in watchlist ? t('inWatchlist') : t('addWatchlist')}
+              {cur.id in watchlist ? t('inWatchlist') : t('addWatchlist')}
             </button>
             <button onClick={() => setCursor((c) => c + 1)}>{t('skipNext')}</button>
-            <button className="danger" onClick={() => markSkipped(current.id)}>
+            <button className="danger" onClick={() => markSkipped(cur.id)}>
               {t('notEaten')}
             </button>
           </div>

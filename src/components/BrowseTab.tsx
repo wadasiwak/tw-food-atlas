@@ -2,7 +2,8 @@ import { Suspense, lazy, useMemo, useState } from 'react'
 import type { Restaurant, Cuisine, PriceBand, Tag, LatLng } from '../data/types'
 import { CITIES } from '../data'
 import { TAGS } from '../data/types'
-import { CUISINES, cuisineLabel, PRICE_META } from '../labels'
+import { CUISINES, cuisineLabel, PRICE_META, tagLabel, cityLabel } from '../labels'
+import { useLocalizer } from '../lib/localize'
 import { useUiStore } from '../ui'
 import { useRatingStore } from '../store'
 import { useT, useLang, fmt } from '../i18n'
@@ -23,19 +24,23 @@ export function BrowseTab({ all }: { all: Restaurant[] }) {
   const ratings = useRatingStore((s) => s.ratings)
   const t = useT()
   const lang = useLang()
+  const loc = useLocalizer()
   // 📍 離我最近：拿到定位前是 null；'denied' 顯示提示
   const [myPos, setMyPos] = useState<LatLng | 'denied' | null>(null)
   const [locating, setLocating] = useState(false)
 
+  // filter 之前先 localize：英文模式下搜尋才對得到英文店名/招牌菜
+  const localized = useMemo(() => all.map(loc), [all, loc])
+
   const filtered = useMemo(() => {
-    const base = filterRestaurants(all, { city, cuisine, price, tag, query })
+    const base = filterRestaurants(localized, { city, cuisine, price, tag, query })
     if (myPos && myPos !== 'denied') {
       return [...base].sort(
         (a, b) => haversineKm(myPos, a.center) - haversineKm(myPos, b.center),
       )
     }
     return base
-  }, [all, city, cuisine, price, tag, query, myPos])
+  }, [localized, city, cuisine, price, tag, query, myPos])
 
   const locate = () => {
     if (myPos && myPos !== 'denied') {
@@ -57,7 +62,7 @@ export function BrowseTab({ all }: { all: Restaurant[] }) {
   }
 
   const rollDice = () => {
-    const pick = rollRandom(all, { city, cuisine, price, tag, query })
+    const pick = rollRandom(localized, { city, cuisine, price, tag, query })
     if (pick) openDetail(pick.id, { dice: true })
   }
 
@@ -80,7 +85,7 @@ export function BrowseTab({ all }: { all: Restaurant[] }) {
           <option value="">{t('allCities')}</option>
           {CITIES.map((c) => (
             <option key={c.id} value={c.id}>
-              {c.emoji} {c.name}
+              {c.emoji} {cityLabel(c, lang)}
             </option>
           ))}
         </select>
@@ -110,7 +115,7 @@ export function BrowseTab({ all }: { all: Restaurant[] }) {
           <option value="">{t('allTags')}</option>
           {TAGS.map((tg) => (
             <option key={tg} value={tg}>
-              {tg}
+              {tagLabel(tg, lang)}
             </option>
           ))}
         </select>

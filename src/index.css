@@ -94,6 +94,15 @@ h3 { color: var(--accent); margin: 22px 0 10px; font-size: 16px; letter-spacing:
 }
 .card-blurb { color: var(--text); opacity: 0.9; font-size: 13.5px; line-height: 1.65; margin: 6px 0; }
 
+/* 店家配圖（Commons 熱連結）；.img-badge = 菜色示意圖標記 */
+.card-img-wrap { position: relative; margin: -14px -14px 10px; }
+.card-img { display: block; width: 100%; height: 128px; object-fit: cover; background: var(--cell); }
+.img-badge {
+  position: absolute; top: 8px; right: 8px; background: rgba(19, 16, 23, 0.78);
+  color: var(--text-dim); border: 1px solid var(--border); border-radius: 6px;
+  padding: 2px 8px; font-size: 11.5px; letter-spacing: 0.5px; backdrop-filter: blur(2px);
+}
+
 .mini-rate { display: flex; gap: 8px; padding: 10px 14px 14px; }
 .mini-rate select { flex: 1; }
 .wl-btn {
@@ -163,8 +172,16 @@ button.danger { color: var(--bad); border-color: rgba(255, 122, 122, 0.4); }
   position: absolute; top: 12px; right: 12px; background: var(--cell); color: var(--text-dim);
   border: 1px solid var(--border); border-radius: 8px; width: 32px; height: 32px; cursor: pointer;
 }
+.detail-img-wrap { position: relative; margin: -22px -22px 16px; }
+.detail-img {
+  display: block; width: 100%; height: 220px; object-fit: cover;
+  border-radius: 16px 16px 0 0; background: var(--cell);
+}
 .detail-head { display: flex; gap: 14px; align-items: center; margin-bottom: 8px; }
 .detail-head h2 { margin: 0 0 4px; }
+.orig-name { color: var(--text-dim); font-size: 14px; margin: -2px 0 4px; }
+.credit { color: var(--text-dim); font-size: 11.5px; text-align: center; margin: 2px 0 0; }
+.credit a { color: var(--text-dim); }
 .detail-tips { background: var(--cell); border-radius: 8px; padding: 10px 12px; font-size: 13.5px; line-height: 1.6; }
 .detail-tags { display: flex; gap: 6px; flex-wrap: wrap; margin: 10px 0; }
 .dice-next-btn {

@@ -14,9 +14,10 @@ export function topRated(ratings: Record<string, Rating>, n = 10): ShareEntry[] 
     .map(([id, r]) => [id, r.score])
 }
 
-export function buildShareUrl(entries: ShareEntry[]): string {
+export function buildShareUrl(entries: ShareEntry[], lang: 'zh' | 'en' = 'zh'): string {
   const raw = btoa(JSON.stringify(entries)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
-  return `${PUBLIC_BASE}#share=${raw}`
+  // 英文模式分享給外國朋友，開啟時直接進英文版
+  return `${PUBLIC_BASE}${lang === 'en' ? '?lang=en' : ''}#share=${raw}`
 }
 
 export function parseShareHash(hash: string = location.hash): ShareEntry[] | null {

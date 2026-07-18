@@ -8,11 +8,33 @@ interface LangState {
   setLang: (lang: Lang) => void
 }
 
+// ?lang=en 進站優先於 localStorage（分享英文版連結給外國朋友用）
+const urlLang: Lang | null =
+  new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : null
+
 // 語言偏好：key 與 recommender 姊妹站共用，切一站全家族跟著切
 export const useLangStore = create<LangState>()(
-  persist((set) => ({ lang: 'zh', setLang: (lang) => set({ lang }) }), {
-    name: 'recs-lang-v1',
-  }),
+  persist(
+    (set) => ({
+      lang: urlLang ?? ('zh' as Lang),
+      setLang: (lang) => {
+        // URL 跟著語言走，分享/重整都保留；GoatCounter 只回報 pathname，query 不會進 analytics
+        const url = new URL(location.href)
+        if (lang === 'en') url.searchParams.set('lang', 'en')
+        else url.searchParams.delete('lang')
+        history.replaceState(null, '', url)
+        set({ lang })
+      },
+    }),
+    {
+      name: 'recs-lang-v1',
+      merge: (persisted, current) => ({
+        ...current,
+        ...(persisted as Partial<LangState>),
+        lang: urlLang ?? (persisted as Partial<LangState>)?.lang ?? 'zh',
+      }),
+    },
+  ),
 )
 
 // {0}/{1} 佔位替換
@@ -72,6 +94,8 @@ const STR = {
     similarTitle: '你可能也愛',
     close: '關閉',
     dataNote: '資料為人工整理的靜態快照，出發前請以 Google Maps 營業資訊為準。',
+    illustrativeBadge: '示意圖',
+    photoCredit: '圖',
     // My list
     myRated: '已評分（{0}）',
     myWatchlist: '口袋名單（{0}）',
@@ -146,6 +170,8 @@ const STR = {
     similarTitle: 'You may also love',
     close: 'Close',
     dataNote: 'Hand-curated static snapshot — check Google Maps for current hours before you go.',
+    illustrativeBadge: 'Illustrative',
+    photoCredit: 'Photo',
     myRated: 'Rated ({0})',
     myWatchlist: 'Want to go ({0})',
     mySkipped: 'Skipped ({0})',

@@ -2,15 +2,18 @@ import { useMemo } from 'react'
 import type { Restaurant } from '../data/types'
 import type { ShareEntry } from '../share'
 import { restaurantById, cityById } from '../data'
-import { CUISINE_META } from '../labels'
+import { CUISINE_META, cityLabel } from '../labels'
 import { useRatingStore } from '../store'
-import { useT, fmt } from '../i18n'
+import { useT, useLang, fmt } from '../i18n'
+import { useLocalizer } from '../lib/localize'
 import { scoreColor } from './RestaurantCard'
 
 // 別人打開分享連結時看到的榜單頁；如果自己也有評分，順便做口味比對
 export function SharedView({ entries, onClose }: { entries: ShareEntry[]; onClose: () => void }) {
   const myRatings = useRatingStore((s) => s.ratings)
   const t = useT()
+  const lang = useLang()
+  const loc = useLocalizer()
 
   const items = entries
     .map(([id, score]) => ({ restaurant: restaurantById.get(id), score }))
@@ -52,9 +55,9 @@ export function SharedView({ entries, onClose }: { entries: ShareEntry[]; onClos
               <span className="shared-rank">#{i + 1}</span>
               <span className="card-emoji">{CUISINE_META[r.cuisine].emoji}</span>
               <div className="titles">
-                <div className="t1">{r.name}</div>
+                <div className="t1">{loc(r).name}</div>
                 <div className="t2">
-                  {cityById.get(r.city)?.name} · {r.area}
+                  {cityLabel(cityById.get(r.city), lang)} · {loc(r).area}
                 </div>
               </div>
               {mine != null && (

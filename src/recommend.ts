@@ -1,7 +1,8 @@
 import type { Restaurant } from './data/types'
 import type { Rating } from './store'
-import { CUISINE_META } from './labels'
+import { CUISINE_META, tagLabel } from './labels'
 import { tOf, type Lang } from './i18n'
+import type { Tag } from './data/types'
 
 // 內容式推薦：菜系/tag/招牌菜/價位帶/城市 建特徵向量，
 // 使用者輪廓 = Σ (評分-5.5) × 向量，再用 cosine 相似度排序未評分店家。
@@ -103,7 +104,8 @@ const featureLabel = (key: string, lang: Lang): string => {
     const meta = CUISINE_META[val as keyof typeof CUISINE_META]
     return meta ? `${meta.emoji} ${meta[lang]}` : val
   }
-  return val // t:/m: 本身就是中文標籤與菜名
+  if (key.startsWith('t:')) return tagLabel(val as Tag, lang)
+  return val // m: 是中文菜名（招牌菜向量 key），英文模式暫維持中文——已知限制
 }
 
 // 「你可能也愛」：純 item-to-item cosine，同商圈最多 2 家

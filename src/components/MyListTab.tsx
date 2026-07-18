@@ -5,6 +5,8 @@ import { useRatingStore } from '../store'
 import { topRated, buildShareUrl } from '../share'
 import { tasteProfile } from '../recommend'
 import { useT, useLang, fmt } from '../i18n'
+import { useLocalizer } from '../lib/localize'
+import { cityLabel } from '../labels'
 import { RestaurantCard, scoreColor } from './RestaurantCard'
 import { RateActions } from './RateActions'
 import { cityById } from '../data'
@@ -13,6 +15,7 @@ export function MyListTab({ all: _all }: { all: Restaurant[] }) {
   const { ratings, skipped, watchlist, removeRating, unmarkSkipped, importAll } = useRatingStore()
   const t = useT()
   const lang = useLang()
+  const loc = useLocalizer()
   const [notice, setNotice] = useState('')
   const fileRef = useRef<HTMLInputElement>(null)
 
@@ -40,7 +43,9 @@ export function MyListTab({ all: _all }: { all: Restaurant[] }) {
       setNotice(t('needRatings'))
       return
     }
-    navigator.clipboard.writeText(buildShareUrl(entries)).then(() => setNotice(t('shareCopied')))
+    navigator.clipboard
+      .writeText(buildShareUrl(entries, lang))
+      .then(() => setNotice(t('shareCopied')))
   }
 
   const doExport = () => {
@@ -134,9 +139,9 @@ export function MyListTab({ all: _all }: { all: Restaurant[] }) {
                   {score}
                 </span>
                 <div className="titles">
-                  <div className="t1">{r.name}</div>
+                  <div className="t1">{loc(r).name}</div>
                   <div className="t2">
-                    {cityById.get(r.city)?.name} · {r.area}
+                    {cityLabel(cityById.get(r.city), lang)} · {loc(r).area}
                   </div>
                 </div>
                 <button className="danger" onClick={() => removeRating(id)}>
@@ -155,8 +160,8 @@ export function MyListTab({ all: _all }: { all: Restaurant[] }) {
             {skippedRows.map((r) => (
               <div className="list-row" key={r.id}>
                 <div className="titles">
-                  <div className="t1">{r.name}</div>
-                  <div className="t2">{cityById.get(r.city)?.name}</div>
+                  <div className="t1">{loc(r).name}</div>
+                  <div className="t2">{cityLabel(cityById.get(r.city), lang)}</div>
                 </div>
                 <button onClick={() => unmarkSkipped(r.id)}>{t('restoreBtn')}</button>
               </div>

@@ -10,6 +10,7 @@ import { SharedView } from './components/SharedView'
 import { DetailOverlay } from './components/DetailOverlay'
 import { parseShareHash, type ShareEntry } from './share'
 import { useT, useLangStore } from './i18n'
+import { ensureImagesLoaded } from './lib/images'
 
 export default function App() {
   const tab = useUiStore((s) => s.tab)
@@ -25,6 +26,11 @@ export default function App() {
     // 導流 widget 跟隨 <html lang>，開站就要把儲存偏好寫回
     document.documentElement.lang = lang === 'zh' ? 'zh-Hant-TW' : 'en'
   }, [lang])
+
+  // 店家配圖 map 是 lazy chunk，開站背景載入；載到前卡片先走 emoji 版面
+  useEffect(() => {
+    ensureImagesLoaded()
+  }, [])
 
   // #r/<id> 直達店家詳情
   useEffect(() => {
@@ -71,7 +77,8 @@ export default function App() {
         <SharedView
           entries={shared}
           onClose={() => {
-            history.replaceState(null, '', location.pathname)
+            // 保留 ?lang=en 等 query，只清 hash
+            history.replaceState(null, '', location.pathname + location.search)
             setShared(null)
           }}
         />

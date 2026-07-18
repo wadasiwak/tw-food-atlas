@@ -5,6 +5,7 @@ import App from './App'
 import { ALL_RESTAURANTS } from './data'
 import { useRatingStore } from './store'
 import { useUiStore } from './ui'
+import { useLangStore } from './i18n'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -21,6 +22,7 @@ declare global {
       ratings: () => Record<string, { score: number }>
       openDetail: (id: string) => void
       setTab: (tab: 'browse' | 'rate' | 'recommend' | 'list') => void
+      setLang: (lang: 'zh' | 'en') => void
       restaurants: () => { id: string; city: string; cuisine: string; name: string }[]
     }
   }
@@ -31,6 +33,7 @@ window.__twfood = {
   ratings: () => useRatingStore.getState().ratings,
   openDetail: (id) => useUiStore.getState().openDetail(id),
   setTab: (tab) => useUiStore.getState().setTab(tab),
+  setLang: (lang) => useLangStore.getState().setLang(lang),
   restaurants: () =>
     ALL_RESTAURANTS.map(({ id, city, cuisine, name }) => ({ id, city, cuisine, name })),
 }

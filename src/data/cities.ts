@@ -6,6 +6,7 @@ export const CITIES: CityDef[] = [
   {
     id: "taipei",
     name: "台北",
+    nameEn: "Taipei",
     emoji: "🏙️",
     region: "north",
     bbox: { minLat: 24.96, maxLat: 25.22, minLng: 121.42, maxLng: 121.67 },
@@ -13,6 +14,7 @@ export const CITIES: CityDef[] = [
   {
     id: "newtaipei",
     name: "新北",
+    nameEn: "New Taipei",
     emoji: "🌉",
     region: "north",
     // 環繞台北市：西至鶯歌樹林、北至淡水金山、東至九份金瓜石、南至烏來
@@ -21,6 +23,7 @@ export const CITIES: CityDef[] = [
   {
     id: "keelung",
     name: "基隆",
+    nameEn: "Keelung",
     emoji: "⚓",
     region: "north",
     bbox: { minLat: 25.08, maxLat: 25.17, minLng: 121.68, maxLng: 121.8 },
@@ -28,6 +31,7 @@ export const CITIES: CityDef[] = [
   {
     id: "hsinchu",
     name: "新竹",
+    nameEn: "Hsinchu",
     emoji: "🌬️",
     region: "north",
     bbox: { minLat: 24.75, maxLat: 24.85, minLng: 120.88, maxLng: 121.05 },
@@ -35,6 +39,7 @@ export const CITIES: CityDef[] = [
   {
     id: "yilan",
     name: "宜蘭",
+    nameEn: "Yilan",
     emoji: "🦆",
     region: "north",
     bbox: { minLat: 24.55, maxLat: 24.9, minLng: 121.65, maxLng: 121.9 },
@@ -42,6 +47,7 @@ export const CITIES: CityDef[] = [
   {
     id: "taichung",
     name: "台中",
+    nameEn: "Taichung",
     emoji: "☀️",
     region: "central",
     bbox: { minLat: 24.08, maxLat: 24.25, minLng: 120.55, maxLng: 120.78 },
@@ -49,6 +55,7 @@ export const CITIES: CityDef[] = [
   {
     id: "changhua",
     name: "彰化鹿港",
+    nameEn: "Changhua & Lukang",
     emoji: "🏮",
     region: "central",
     bbox: { minLat: 23.98, maxLat: 24.14, minLng: 120.4, maxLng: 120.62 },
@@ -56,6 +63,7 @@ export const CITIES: CityDef[] = [
   {
     id: "chiayi",
     name: "嘉義",
+    nameEn: "Chiayi",
     emoji: "🦃",
     region: "south",
     bbox: { minLat: 23.44, maxLat: 23.53, minLng: 120.4, maxLng: 120.5 },
@@ -63,6 +71,7 @@ export const CITIES: CityDef[] = [
   {
     id: "tainan",
     name: "台南",
+    nameEn: "Tainan",
     emoji: "🍤",
     region: "south",
     bbox: { minLat: 22.95, maxLat: 23.08, minLng: 120.1, maxLng: 120.28 },
@@ -70,6 +79,7 @@ export const CITIES: CityDef[] = [
   {
     id: "kaohsiung",
     name: "高雄",
+    nameEn: "Kaohsiung",
     emoji: "🚢",
     region: "south",
     bbox: { minLat: 22.55, maxLat: 22.78, minLng: 120.25, maxLng: 120.42 },
@@ -77,6 +87,7 @@ export const CITIES: CityDef[] = [
   {
     id: "donggang",
     name: "屏東東港",
+    nameEn: "Donggang",
     emoji: "🐟",
     region: "south",
     bbox: { minLat: 22.4, maxLat: 22.52, minLng: 120.4, maxLng: 120.52 },
@@ -84,6 +95,7 @@ export const CITIES: CityDef[] = [
   {
     id: "hualien",
     name: "花蓮",
+    nameEn: "Hualien",
     emoji: "⛰️",
     region: "east",
     bbox: { minLat: 23.93, maxLat: 24.06, minLng: 121.55, maxLng: 121.65 },
@@ -91,6 +103,7 @@ export const CITIES: CityDef[] = [
   {
     id: "taitung",
     name: "台東",
+    nameEn: "Taitung",
     emoji: "🎈",
     region: "east",
     bbox: { minLat: 22.72, maxLat: 22.82, minLng: 121.08, maxLng: 121.2 },
