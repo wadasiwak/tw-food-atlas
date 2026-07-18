@@ -26,6 +26,9 @@ id 治理規則：
 | hualien | hualien | 花蓮市 |
 | donggang | donggang | 東港鎮 |
 | taitung | taitung | 台東市 |
+| taipei-c | taipei | 萬華/中正/文山＋大同/中山（R4 加深，與 taipei-a 地理重疊——收店前必查本檔防重複） |
+| taipei-d | taipei | 大安/信義＋松山/士林/北投/內湖/南港（R4 加深，與 taipei-b 地理重疊——收店前必查本檔防重複） |
+| newtaipei-c | newtaipei | 蘆洲/土城/樹林/汐止/林口/泰山/五股/八里/瑞芳市區/金山萬里（R4 新分區） |
 
 ## Canonical IDs（內容定稿後回填）
 

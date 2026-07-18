@@ -4,8 +4,11 @@ import type { Restaurant } from "./types";
 import { CITIES, cityById } from "./cities";
 import { restaurants as taipeiA } from "./cities/taipei-a";
 import { restaurants as taipeiB } from "./cities/taipei-b";
+import { restaurants as taipeiC } from "./cities/taipei-c";
+import { restaurants as taipeiD } from "./cities/taipei-d";
 import { restaurants as newtaipeiA } from "./cities/newtaipei-a";
 import { restaurants as newtaipeiB } from "./cities/newtaipei-b";
+import { restaurants as newtaipeiC } from "./cities/newtaipei-c";
 import { restaurants as keelung } from "./cities/keelung";
 import { restaurants as hsinchu } from "./cities/hsinchu";
 import { restaurants as yilan } from "./cities/yilan";
@@ -21,8 +24,11 @@ import { restaurants as taitung } from "./cities/taitung";
 export const ALL_RESTAURANTS: Restaurant[] = [
   ...taipeiA,
   ...taipeiB,
+  ...taipeiC,
+  ...taipeiD,
   ...newtaipeiA,
   ...newtaipeiB,
+  ...newtaipeiC,
   ...keelung,
   ...hsinchu,
   ...yilan,
