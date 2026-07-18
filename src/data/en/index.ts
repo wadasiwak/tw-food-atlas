@@ -10,6 +10,7 @@ import { en as newtaipeiC } from "./newtaipei-c";
 import { en as keelung } from "./keelung";
 import { en as hsinchu } from "./hsinchu";
 import { en as yilan } from "./yilan";
+import { en as taichung } from "./taichung";
 import { en as changhua } from "./changhua";
 import { en as chiayi } from "./chiayi";
 import { en as tainan } from "./tainan";
@@ -27,6 +28,7 @@ export const EN_ALL: Record<string, EnRestaurantText> = {
   ...keelung,
   ...hsinchu,
   ...yilan,
+  ...taichung,
   ...changhua,
   ...chiayi,
   ...tainan,
