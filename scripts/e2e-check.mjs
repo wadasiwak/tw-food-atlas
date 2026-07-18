@@ -157,8 +157,90 @@ try {
   const hasFallback = await page.$('.empty-hint')
   if (!hasMap && !hasFallback) fail('地圖模式應顯示地圖或降級提示，不可空白')
 
+  // 13. 語言切換：詳情店名/tag 變英文（用 donggang——英文包首發城），切回中文
+  await page.click('.view-toggle button >> nth=0')
+  const enId = 'donggang-yeh-family-rou-guo'
+  const hasEnPilot = await page.evaluate(
+    (id) => window.__twfood.restaurants().some((r) => r.id === id),
+    enId,
+  )
+  if (hasEnPilot) {
+    await page.evaluate((id) => window.__twfood.openDetail(id), enId)
+    await page.waitForSelector('[data-testid="detail"]')
+    const zhName = await page.textContent('[data-testid="detail"] h2')
+    await page.evaluate(() => window.__twfood.setLang('en'))
+    await page.waitForTimeout(800) // 等 en chunk 載入
+    const enName = await page.textContent('[data-testid="detail"] h2')
+    if (enName === zhName) fail('切英文後詳情店名應改變')
+    if (!/^[\x20-\x7E’&–—-]+$/.test(enName)) fail(`英文店名含非 ASCII: ${enName}`)
+    const tagText = await page.textContent('[data-testid="detail"] .detail-tags .chip >> nth=0')
+    if (/[一-鿿]/.test(tagText)) fail(`英文模式 tag 應為英文: ${tagText}`)
+    // 中文原名小字要在（在地找店用）
+    const orig = await page.$('[data-testid="detail"] .orig-name')
+    if (!orig) fail('英文模式詳情應顯示中文原名小字')
+
+    // 14. ?lang=en deep link 直開英文詳情；隱私規則對新 URL 形態依然成立
+    const page5 = await context.newPage()
+    await page5.goto(`${BASE_URL}?lang=en#r/${enId}`)
+    await page5.waitForSelector('[data-testid="detail"]', { timeout: 5000 })
+    await page5.waitForTimeout(800)
+    const dlName = await page5.textContent('[data-testid="detail"] h2')
+    if (/[一-鿿]/.test(dlName)) fail(`?lang=en deep link 應渲染英文店名: ${dlName}`)
+    const gcPath2 = await page5.evaluate(() => window.goatcounter.path())
+    if (gcPath2.includes('#') || gcPath2.includes('?'))
+      fail(`goatcounter path 不可含 hash/query（?lang=en 形態），實得: ${gcPath2}`)
+    await page5.close()
+
+    // 15. 英文模式分享連結帶 ?lang=en
+    await page.keyboard.press('Escape')
+    await page.evaluate(() => window.__twfood.setTab('list'))
+    await page.click('.share-btn')
+    const copiedEn = await page.evaluate(() => navigator.clipboard.readText())
+    if (!copiedEn.includes('?lang=en')) fail(`英文模式分享連結應帶 ?lang=en: ${copiedEn}`)
+    await page.evaluate(() => window.__twfood.setLang('zh'))
+    await page.waitForTimeout(200)
+  } else {
+    console.log('（donggang 英文包未掛，跳過 lang 斷言）')
+  }
+
+  // 16. 圖片：有圖卡 <img> 來自 Commons；強制 onError 後版面退回 emoji 不破圖
+  await page.evaluate(() => window.__twfood.setTab('browse'))
+  await page.waitForSelector('.grid .card')
+  const imgInfo = await page.evaluate(async () => {
+    for (let t = 0; t < 20; t++) {
+      const img = document.querySelector('.grid .card-img')
+      if (img) return { src: img.src }
+      await new Promise((r) => setTimeout(r, 300))
+    }
+    return null
+  })
+  if (imgInfo) {
+    if (!imgInfo.src.startsWith('https://upload.wikimedia.org/'))
+      fail(`卡片圖片 src 應為 upload.wikimedia.org: ${imgInfo.src}`)
+    // 觸發 onError → 卡片仍在、破圖 <img> 要消失
+    // 換成本地必 404 的路徑（遠端壞路徑會掛住很久，error event 不會及時觸發）。
+    // 卡片圖是 loading=lazy：必須先捲進視窗，瀏覽器才會發請求、才有 error event。
+    const broken = await page.evaluate(async () => {
+      const img = document.querySelector('.grid .card-img')
+      img.scrollIntoView({ block: 'center' })
+      await new Promise((r) => setTimeout(r, 400))
+      img.src = `${location.origin}/nonexistent-404.jpg`
+      for (let t = 0; t < 30; t++) {
+        const stillThere = [...document.querySelectorAll('.grid .card-img')].some(
+          (i) => i.src.includes('nonexistent') && i.offsetParent !== null,
+        )
+        if (!stillThere) return false
+        await new Promise((r) => setTimeout(r, 300))
+      }
+      return true
+    })
+    if (broken) fail('onError 後破圖 <img> 應從版面消失（退回 emoji）')
+  } else {
+    console.log('（目前無任何店家配圖，跳過圖片斷言）')
+  }
+
   await browser.close()
-  console.log('e2e OK：篩選、詳情、#r 直開、推薦+理由、換一批、分享+垃圾hash、持久化、隱私、搜尋、隨機抽、口味輪廓、地圖降級全部通過')
+  console.log('e2e OK：篩選、詳情、#r 直開、推薦+理由、換一批、分享+垃圾hash、持久化、隱私、搜尋、隨機抽、口味輪廓、地圖降級、語言切換、?lang=en、英文分享、圖片降級全部通過')
 } finally {
   server.kill()
 }

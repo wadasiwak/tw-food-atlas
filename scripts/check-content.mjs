@@ -3,10 +3,16 @@
 //
 // 單檔模式：`node scripts/check-content.mjs src/data/cities/chiayi.ts`
 // 只驗那一個城市檔（exports { restaurants }），給內容產生 agent 自驗用。
+//
+// 英文包模式：`node scripts/check-content.mjs src/data/en/chiayi.ts`
+// 驗 en 檔（exports { en }）並對照同名 zh 城市檔逐 id 比對（對齊/字數/tips 有無）。
+//
+// 全量模式另驗：英譯覆蓋率（--require-full-en 時缺譯=error）、
+// STORE_IMAGES 圖片資料完整性（授權白名單/署名四欄/kind）。
 import { execFileSync } from "node:child_process";
 import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
-import { join, dirname } from "node:path";
+import { join, dirname, basename } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -14,19 +20,30 @@ const tmp = mkdtempSync(join(tmpdir(), "twfood-check-"));
 const entry = join(tmp, "entry.ts");
 const bundle = join(tmp, "data.mjs");
 
-const singleFile = process.argv[2];
+const requireFullEn = process.argv.includes("--require-full-en");
+const singleFile = process.argv.slice(2).find((a) => !a.startsWith("--"));
+const isEnFile = !!singleFile && /src\/data\/en\//.test(singleFile);
 const dataEntry = singleFile ? join(root, singleFile) : join(root, "src/data/index.ts");
 
-writeFileSync(
-  entry,
-  [
-    `export { CITIES, TAIWAN_BBOX } from ${JSON.stringify(join(root, "src/data/cities.ts"))};`,
-    `export { TAGS } from ${JSON.stringify(join(root, "src/data/types.ts"))};`,
-    singleFile
-      ? `export { restaurants as ALL } from ${JSON.stringify(dataEntry)};`
-      : `export { ALL_RESTAURANTS as ALL } from ${JSON.stringify(dataEntry)};`,
-  ].join("\n"),
-);
+const entryLines = [
+  `export { CITIES, TAIWAN_BBOX } from ${JSON.stringify(join(root, "src/data/cities.ts"))};`,
+  `export { TAGS } from ${JSON.stringify(join(root, "src/data/types.ts"))};`,
+];
+if (isEnFile) {
+  // en 檔對照同名 zh 城市檔
+  const zhPath = join(root, "src/data/cities", basename(singleFile));
+  entryLines.push(`export { en as EN_PACK } from ${JSON.stringify(dataEntry)};`);
+  entryLines.push(`export { restaurants as ALL } from ${JSON.stringify(zhPath)};`);
+} else if (singleFile) {
+  entryLines.push(`export { restaurants as ALL } from ${JSON.stringify(dataEntry)};`);
+} else {
+  entryLines.push(`export { ALL_RESTAURANTS as ALL } from ${JSON.stringify(dataEntry)};`);
+  entryLines.push(`export { EN_ALL } from ${JSON.stringify(join(root, "src/data/en/index.ts"))};`);
+  entryLines.push(
+    `export { STORE_IMAGES } from ${JSON.stringify(join(root, "src/data/extras/images.ts"))};`,
+  );
+}
+writeFileSync(entry, entryLines.join("\n"));
 
 try {
   execFileSync(
@@ -43,11 +60,59 @@ try {
 const mod = await import(pathToFileURL(bundle).href);
 rmSync(tmp, { recursive: true, force: true });
 
-const { CITIES, TAIWAN_BBOX, TAGS, ALL } = mod;
+const { CITIES, TAIWAN_BBOX, TAGS, ALL, EN_PACK, EN_ALL, STORE_IMAGES } = mod;
 
 const errors = [];
 const warn = [];
 const err = (msg) => errors.push(msg);
+
+// 字數用 code point 數（CJK 一字一格）
+const len = (s) => [...(s ?? "")].length;
+
+// --- 英譯規則（en 單檔模式與全量模式共用） ---
+function checkEnEntry(id, e, zh) {
+  const tag = `en:${id}`;
+  if (!zh) {
+    err(`${tag}: id 不存在於中文資料（孤兒英譯）`);
+    return;
+  }
+  if (!e.name || len(e.name) < 2 || len(e.name) > 60) err(`${tag}: name 需 2–60 字`);
+  if (!e.area) err(`${tag}: 缺 area`);
+  const bl = len(e.blurb);
+  if (bl < 80 || bl > 400) err(`${tag}: blurb ${bl} 字元（需 120–330，硬限 80–400）`);
+  else if (bl < 120 || bl > 330) warn.push(`${tag}: blurb ${bl} 字元，偏離 120–330`);
+  if (zh.tips && !e.tips) warn.push(`${tag}: 中文有 tips 但英譯缺（會回退中文，混排難看）`);
+  if (!zh.tips && e.tips) err(`${tag}: 中文沒有 tips，英譯不得有`);
+  if (e.tips && len(e.tips) > 120) err(`${tag}: tips 過長 (${len(e.tips)})`);
+  if (!Array.isArray(e.mustOrder) || e.mustOrder.length !== zh.mustOrder.length)
+    err(`${tag}: mustOrder 需與中文等長（${zh.mustOrder.length} 樣）逐索引對應`);
+  else
+    for (const m of e.mustOrder)
+      if (!m || len(m) > 30) err(`${tag}: mustOrder「${m}」需為 1–30 字`);
+  // 全形中文殘留 = 忘了翻（店名內的中文原名不算，name 不檢）
+  for (const f of ["area", "blurb", "tips"])
+    if (/[一-鿿]/.test(e[f] ?? ""))
+      warn.push(`${tag}: ${f} 含中文字元，確認是否漏翻`);
+}
+
+if (isEnFile) {
+  const zhById = new Map(ALL.map((r) => [r.id, r]));
+  const entries = Object.entries(EN_PACK ?? {});
+  if (!entries.length) err("en 檔是空的");
+  for (const [id, e] of entries) checkEnEntry(id, e, zhById.get(id));
+  const missing = ALL.filter((r) => !EN_PACK?.[r.id]);
+  if (missing.length)
+    warn.push(`尚有 ${missing.length} 家未翻: ${missing.slice(0, 5).map((r) => r.id).join(", ")}${missing.length > 5 ? " …" : ""}`);
+  console.log(`📊 en 對照 ${basename(singleFile)}：中文 ${ALL.length} 家 / 英譯 ${entries.length} 筆`);
+  for (const w of warn) console.log(`⚠️  ${w}`);
+  if (errors.length) {
+    console.error(`\n❌ ${errors.length} 個錯誤:`);
+    for (const e of errors) console.error(`  - ${e}`);
+    process.exit(1);
+  }
+  console.log(`\n✅ 英譯驗證通過${warn.length ? `（${warn.length} 個警告）` : ""}`);
+  process.exit(0);
+}
 
 const inBox = (c, b) =>
   c && c.lat >= b.minLat && c.lat <= b.maxLat && c.lng >= b.minLng && c.lng <= b.maxLng;
@@ -71,8 +136,6 @@ for (const c of CITIES) {
     err(`city ${c.id}: bbox 超出台灣範圍`);
 }
 
-// 字數用 code point 數（CJK 一字一格）
-const len = (s) => [...(s ?? "")].length;
 const haversineM = (a, b) => {
   const R = 6371000, rad = (d) => (d * Math.PI) / 180;
   const dLat = rad(b.lat - a.lat), dLng = rad(b.lng - a.lng);
@@ -178,6 +241,48 @@ if (!singleFile) {
       if (sf < 3) warn.push(`city ${c.id}: street-food 只有 ${sf} 家（下限 3）`);
     }
   }
+}
+
+// --- 同 area 上限（推薦引擎 city|area 硬上限 2 家，area 過肥 = 曝光被吃掉） ---
+for (const [cid, list] of byCity) {
+  const areaCount = new Map();
+  for (const r of list) areaCount.set(r.area, (areaCount.get(r.area) ?? 0) + 1);
+  for (const [a, n] of areaCount)
+    if (n > 6) warn.push(`city ${cid}: area「${a}」有 ${n} 家（上限 6，MMR 只會露出 2 家）`);
+}
+
+// --- 全量模式：英譯覆蓋率 + 圖片資料 ---
+if (!singleFile) {
+  const zhById = new Map(ALL.map((r) => [r.id, r]));
+
+  for (const [id, e] of Object.entries(EN_ALL ?? {})) checkEnEntry(id, e, zhById.get(id));
+  const missingEn = ALL.filter((r) => !EN_ALL?.[r.id]);
+  const covered = ALL.length - missingEn.length;
+  console.log(`🌐 英譯覆蓋 ${covered}/${ALL.length}`);
+  if (missingEn.length) {
+    const byCityMiss = new Map();
+    for (const r of missingEn) byCityMiss.set(r.city, (byCityMiss.get(r.city) ?? 0) + 1);
+    const msg = `英譯缺 ${missingEn.length} 家: ${[...byCityMiss].map(([c, n]) => `${c} ${n}`).join(" / ")}`;
+    if (requireFullEn) err(msg);
+    else warn.push(msg);
+  }
+
+  // 圖片：授權白名單（拒 NC/ND）、署名四欄、kind、src 域名
+  const LICENSE_OK = /^(cc0|public domain|attribution$|cc[ -]by(?![a-z-]*(nc|nd)))/i;
+  for (const [id, img] of Object.entries(STORE_IMAGES ?? {})) {
+    const tag = `img:${id}`;
+    if (!zhById.has(id)) err(`${tag}: id 不存在於資料（孤兒圖片）`);
+    if (!img.src?.startsWith("https://upload.wikimedia.org/")) err(`${tag}: src 需為 upload.wikimedia.org`);
+    for (const f of ["author", "license", "licenseUrl", "sourceUrl"])
+      if (!img[f]) err(`${tag}: 缺 ${f}（CC 署名必要欄位）`);
+    if (img.kind !== "photo" && img.kind !== "dish") err(`${tag}: kind 需為 photo|dish`);
+    if (img.license && !LICENSE_OK.test(img.license) )
+      err(`${tag}: 授權「${img.license}」不在白名單（CC0/PD/CC BY/CC BY-SA/Attribution）`);
+    if (/n[cd]/i.test(img.license ?? "") && /nc|nd/i.test(img.license ?? ""))
+      err(`${tag}: 授權含 NC/ND，不可商用/改作，禁用`);
+  }
+  const imgCount = Object.keys(STORE_IMAGES ?? {}).length;
+  console.log(`🖼️  圖片覆蓋 ${imgCount}/${ALL.length}`);
 }
 
 // --- 統計 ---

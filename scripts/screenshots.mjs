@@ -33,6 +33,17 @@ try {
   await page.waitForSelector('[data-testid="detail"]')
   await page.screenshot({ path: out('3-detail') })
 
+  // 英文模式：列表＋詳情（含示意圖 badge 與署名塊的驗收在 detail-en 一併看）
+  await page.evaluate(() => window.__twfood.setLang('en'))
+  await page.waitForTimeout(900) // 等 en chunk
+  await page.screenshot({ path: out('5-browse-en') })
+  await page.evaluate(() => window.__twfood.openDetail('donggang-wang-jiang-bluefin-sashimi'))
+  await page.waitForSelector('[data-testid="detail"]')
+  await page.waitForTimeout(1200) // 等 Commons 圖
+  await page.screenshot({ path: out('6-detail-en-dish-badge') })
+  await page.keyboard.press('Escape')
+  await page.evaluate(() => window.__twfood.setLang('zh'))
+
   // 評幾家 → 分享頁
   await page.evaluate(() => {
     window.__twfood.restaurants().slice(0, 10).forEach((r, i) => window.__twfood.rate(r.id, 10 - (i % 4)))
@@ -45,7 +56,7 @@ try {
   await page2.screenshot({ path: out('4-shared') })
 
   await browser.close()
-  console.log('✓ 4 screenshots in scratch/')
+  console.log('✓ 6 screenshots in scratch/')
 } finally {
   server.kill()
 }

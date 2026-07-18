@@ -31,7 +31,7 @@ export const en: Record<string, EnRestaurantText> = {
     name: "Jia Jhen Seafood Restaurant",
     area: "Guangfu Road",
     blurb:
-      "Founded by old skipper Hsiao Shou-fa, this seafood house shot to fame in 2002 by winning Donggang's first-ever premium bluefin auction and has claimed the top fish several times since. Bluefin runs from sashimi to skin, marrow, and sesame-oil noodles, while the honeycomb shrimp — prawns deep-fried in egg floss — is a classic Donggang banquet dish.",
+      "Founded by old skipper Hsiao Shou-fa, this seafood house shot to fame in 2002 by winning Donggang's first premium bluefin auction. Bluefin runs from sashimi to skin, marrow, and sesame-oil noodles; the honeycomb shrimp, deep-fried in egg floss, is a classic local banquet dish.",
     tips: "Bluefin season runs roughly May–June; book ahead for group dinners.",
     mustOrder: ["Bluefin sashimi", "Honeycomb shrimp", "Plum wine marrow"],
   },
@@ -47,7 +47,7 @@ export const en: Record<string, EnRestaurantText> = {
     name: "Yeh Family Rou Guo",
     area: "Guangfu Road",
     blurb:
-      "A canal-side stall that has sold rou guo — rice cakes steamed from rice-milk batter — for over half a century, dressed in a thickened broth simmered from milkfish bones and topped with sausage, mantis shrimp, and pork belly. That briny seafood broth sets it apart from every other rou guo in Taiwan; in 2025 it took three bowls in Pingtung's 'hundred bowls' selection.",
+      "A canal-side stall selling rou guo — steamed rice cakes in a thickened broth simmered from milkfish bones — for over half a century, topped with sausage, mantis shrimp, and pork belly. The briny broth sets it apart from every other rou guo in Taiwan; it took three bowls in Pingtung's 2025 'hundred bowls'.",
     tips: "Opens in the morning and closes when sold out — go early.",
     mustOrder: ["Rou guo (rice cake soup)"],
   },
@@ -55,7 +55,7 @@ export const en: Record<string, EnRestaurantText> = {
     name: "Lin Ji Rou Guo",
     area: "Guangfu Road",
     blurb:
-      "The other half of Donggang's rou guo rivalry with Yeh Family, this fourth-generation stall grinds its rice batter fresh in the small hours and leans hard into seafood: mantis shrimp for aroma, tuna in the toppings. The dry-style rou guo and tuna pork-intestine sausage are items you'll rarely find elsewhere — one stop covers both the soup and dry versions.",
+      "The other half of Donggang's rou guo rivalry with Yeh Family, a fourth-generation stall that grinds rice batter fresh before dawn and leans into seafood: mantis shrimp, tuna toppings. Its dry-style rou guo and tuna sausage are rarities — one stop covers both soup and dry versions.",
     tips: "Faces Donglong Elementary School with easy parking nearby; try the dry-style rou guo.",
     mustOrder: ["Dry rou guo", "Tuna rou guo", "Tuna sausage"],
   },
@@ -71,7 +71,7 @@ export const en: Record<string, EnRestaurantText> = {
     name: "Donggang Zhengzong Meatballs",
     area: "Second Market",
     blurb:
-      "An old market stall serving Taiwanese meatballs two ways: steamed ones filled with shrimp and bamboo shoots, fried ones with a crisp skin over pork and shiitake — about NT$10 apiece, and a first-round pick in Taiwan's '500 Bowls'. House-made sausage, sticky rice sausage, and pork intestine come as a three-sausage platter that locals pair with four-herb soup for breakfast or an afternoon bite.",
+      "An old market stall serving Taiwanese meatballs two ways — steamed with shrimp and bamboo shoots, or fried crisp with pork and shiitake — at about NT$10 apiece, picked for Taiwan's '500 Bowls'. The house-made three-sausage platter with four-herb soup is a local breakfast ritual.",
     tips: "Inside the market at Lane 45, Xinji Street; the fullest selection is during morning market hours.",
     mustOrder: ["Steamed & fried meatball duo", "Three-sausage platter", "Four-herb soup"],
   },
@@ -79,9 +79,9 @@ export const en: Record<string, EnRestaurantText> = {
     name: "Jia Ji Drinks",
     area: "Second Market",
     blurb:
-      "A two-shift institution selling breakfast at dawn and midnight snacks until 2:30 a.m. The signature charcoal-toasted mantou is grilled to order over longan wood, browned on all four sides, then slicked with butter and condensed milk; pair it with the classic sandwich of soft-boiled egg and pork floss that Donggang kids grew up on.",
+      "A two-shift institution selling breakfast at dawn and late-night snacks until 2:30 a.m. The charcoal-toasted bun is grilled to order over longan wood, slicked with butter and condensed milk; pair it with the soft-boiled-egg and pork-floss sandwich Donggang kids grew up on.",
     tips: "The late shift runs to 2:30 a.m. — head to Zhongzheng Road when night cravings hit.",
-    mustOrder: ["Charcoal mantou with condensed milk", "Classic sandwich", "Soy milk black tea"],
+    mustOrder: ["Charcoal condensed-milk bun", "Classic sandwich", "Soy milk black tea"],
   },
   "donggang-hua-jhen-breakfast": {
     name: "Hua Jhen Breakfast",
@@ -95,7 +95,7 @@ export const en: Record<string, EnRestaurantText> = {
     name: "Lao Er Seafood Stir-fry",
     area: "Donglong Temple Area",
     blurb:
-      "A budget-friendly seafood stir-fry joint near Donglong Temple, with boat-fresh fish at around NT$200 a plate. The star is 'that fish' — a ribbonfish relative whose tongue-twisting scientific name earned it the nickname — so tender and water-rich it eats like tofu, flash-fried in batter to seal in the juices. Eat it while it's scalding.",
+      "A budget seafood stir-fry joint near Donglong Temple with boat-fresh fish at around NT$200 a plate. The star is 'that fish' — a species so tender it eats like tofu, nicknamed for its tongue-twisting scientific name — flash-fried in batter to seal in the juices.",
     tips: "Closed Wednesdays; 'that fish' is best the moment it lands on the table.",
     mustOrder: ["Fried 'that fish'", "Salt & pepper squid", "Fried tuna belly"],
   },
@@ -111,7 +111,7 @@ export const en: Record<string, EnRestaurantText> = {
     name: "Donggang Wei Yi Fish Floss",
     area: "Ferry Pier",
     blurb:
-      "A three-generation fish floss specialist by the ferry pier, claiming to be Taiwan's first shop dedicated to the craft, with over a dozen varieties from tuna and swordfish floss to vegetarian. The exclusive crispy shrimp-shell floss is fried feather-light and dangerously snackable — a repeat winner among Pingtung's top ten souvenirs and an easy last stop before leaving town.",
+      "A three-generation fish floss specialist by the ferry pier, claiming to be Taiwan's first shop dedicated to the craft, with over a dozen varieties from tuna to swordfish. The crispy shrimp-shell floss is fried feather-light — a repeat winner among Pingtung's top ten souvenirs.",
     tips: "Diagonally across from Huaqiao Market — grab souvenirs after browsing the market.",
     mustOrder: ["Seaweed sesame tuna floss", "Crispy shrimp floss", "Swordfish floss"],
   },
@@ -135,7 +135,7 @@ export const en: Record<string, EnRestaurantText> = {
     name: "Long Sushi",
     area: "Donglong Temple Area",
     blurb:
-      "An evening-only sushi shop in the lanes near Donglong Temple, with a few garden seats under Japanese lanterns — it simply closes when the vinegared rice runs out. The ten-piece signature nigiri set and fisherman's bowl follow whatever the boats brought in, and the blackboard's daily bowl changes with the owner's market run, so no two visits taste the same.",
+      "An evening-only sushi shop in the lanes near Donglong Temple, garden seats under Japanese lanterns, closing whenever the vinegared rice runs out. The ten-piece signature set and fisherman's bowl follow the day's catch, so no two visits taste quite the same.",
     tips: "Closed Wednesdays; opens at 4 p.m. and shuts when the rice is gone — don't come too late.",
     mustOrder: ["Signature 10-piece nigiri", "Fisherman's bowl", "Torched nigiri"],
   },
@@ -143,7 +143,7 @@ export const en: Record<string, EnRestaurantText> = {
     name: "Maritime Chapel Coffee",
     area: "Dapeng Bay",
     blurb:
-      "A yellow chapel-shaped cafe built out over the water of Dapeng Bay, reached by a three-hundred-meter walk along the seawall, its arched floor-to-ceiling windows framing a full circle of sea. The dessert case leans tiramisu and mille crepes, the coffee uses Taiwan-grown beans, and the sunset time slots are the hottest tickets of the day.",
+      "A yellow chapel-shaped cafe built over the water of Dapeng Bay, reached by a three-hundred-meter walk along the seawall, with arched windows framing a full circle of sea. Desserts lean tiramisu and mille crepes, the coffee uses Taiwan-grown beans, and sunset slots go fast.",
     tips: "No reservations — numbered tickets per time slot, 70-minute limit; closed Tuesdays.",
     mustOrder: ["Tiramisu", "Earl Grey mille crepe", "Beidawu coffee"],
   },
