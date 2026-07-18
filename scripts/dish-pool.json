@@ -1,0 +1,695 @@
+[
+ {
+  "slug": "beef-noodles",
+  "matchKeywords": [
+   "牛肉麵",
+   "牛肉拉麵"
+  ],
+  "query": "台灣牛肉麵 beef noodle soup"
+ },
+ {
+  "slug": "beef-soup",
+  "matchKeywords": [
+   "牛肉湯",
+   "牛雜湯"
+  ],
+  "query": "台南 牛肉湯"
+ },
+ {
+  "slug": "turkey-rice",
+  "matchKeywords": [
+   "火雞肉飯",
+   "雞肉飯",
+   "火雞肉片飯"
+  ],
+  "query": "嘉義 火雞肉飯"
+ },
+ {
+  "slug": "braised-pork-rice",
+  "matchKeywords": [
+   "滷肉飯",
+   "魯肉飯",
+   "肉燥飯",
+   "滷肉割包"
+  ],
+  "query": "台灣 滷肉飯"
+ },
+ {
+  "slug": "kong-rou-rice",
+  "matchKeywords": [
+   "爌肉飯",
+   "焢肉飯",
+   "控肉"
+  ],
+  "query": "彰化 爌肉飯"
+ },
+ {
+  "slug": "oyster-omelette",
+  "matchKeywords": [
+   "蚵仔煎",
+   "蚵嗲",
+   "蚵仔酥"
+  ],
+  "query": "台灣 蚵仔煎"
+ },
+ {
+  "slug": "ba-wan",
+  "matchKeywords": [
+   "肉圓"
+  ],
+  "query": "彰化肉圓"
+ },
+ {
+  "slug": "si-shen-soup",
+  "matchKeywords": [
+   "四神湯"
+  ],
+  "query": "四神湯"
+ },
+ {
+  "slug": "wan-guo",
+  "matchKeywords": [
+   "碗粿"
+  ],
+  "query": "台南 碗粿"
+ },
+ {
+  "slug": "rice-tube",
+  "matchKeywords": [
+   "筒仔米糕",
+   "米糕"
+  ],
+  "query": "台灣 筒仔米糕"
+ },
+ {
+  "slug": "crab-rice",
+  "matchKeywords": [
+   "紅蟳米糕",
+   "紅蟳",
+   "處女蟳"
+  ],
+  "query": "紅蟳米糕"
+ },
+ {
+  "slug": "xiaolongbao",
+  "matchKeywords": [
+   "小籠包",
+   "小籠湯包",
+   "湯包"
+  ],
+  "query": "小籠包 xiaolongbao"
+ },
+ {
+  "slug": "gua-bao",
+  "matchKeywords": [
+   "刈包",
+   "割包"
+  ],
+  "query": "刈包 gua bao"
+ },
+ {
+  "slug": "zongzi",
+  "matchKeywords": [
+   "肉粽",
+   "粽子",
+   "菜粽"
+  ],
+  "query": "台灣 肉粽"
+ },
+ {
+  "slug": "wonton",
+  "matchKeywords": [
+   "餛飩",
+   "扁食",
+   "抄手",
+   "雲吞"
+  ],
+  "query": "餛飩湯"
+ },
+ {
+  "slug": "fishball",
+  "matchKeywords": [
+   "魚丸",
+   "貢丸",
+   "浮水魚羹"
+  ],
+  "query": "台灣 魚丸湯"
+ },
+ {
+  "slug": "white-chicken",
+  "matchKeywords": [
+   "白斬雞",
+   "白切雞",
+   "土雞"
+  ],
+  "query": "白斬雞"
+ },
+ {
+  "slug": "duck",
+  "matchKeywords": [
+   "鴨肉",
+   "燻鴨",
+   "當歸鴨"
+  ],
+  "query": "台灣 鴨肉飯"
+ },
+ {
+  "slug": "goose",
+  "matchKeywords": [
+   "鵝肉"
+  ],
+  "query": "台灣 鵝肉"
+ },
+ {
+  "slug": "eel-noodles",
+  "matchKeywords": [
+   "鱔魚意麵",
+   "鱔魚"
+  ],
+  "query": "台南 鱔魚意麵"
+ },
+ {
+  "slug": "squid",
+  "matchKeywords": [
+   "小卷",
+   "魷魚",
+   "花枝",
+   "中卷"
+  ],
+  "query": "小卷米粉"
+ },
+ {
+  "slug": "sashimi",
+  "matchKeywords": [
+   "生魚片",
+   "刺身"
+  ],
+  "query": "黑鮪魚 生魚片"
+ },
+ {
+  "slug": "sushi",
+  "matchKeywords": [
+   "握壽司",
+   "壽司"
+  ],
+  "query": "握壽司 nigiri sushi"
+ },
+ {
+  "slug": "donburi",
+  "matchKeywords": [
+   "丼"
+  ],
+  "query": "海鮮丼 kaisendon"
+ },
+ {
+  "slug": "ramen",
+  "matchKeywords": [
+   "拉麵"
+  ],
+  "query": "日式拉麵 ramen"
+ },
+ {
+  "slug": "tianbula",
+  "matchKeywords": [
+   "甜不辣",
+   "黑輪",
+   "天婦羅"
+  ],
+  "query": "台灣 甜不辣"
+ },
+ {
+  "slug": "stinky-tofu",
+  "matchKeywords": [
+   "臭豆腐"
+  ],
+  "query": "臭豆腐"
+ },
+ {
+  "slug": "scallion-pancake",
+  "matchKeywords": [
+   "蔥油餅",
+   "蔥抓餅",
+   "炸蛋蔥油餅"
+  ],
+  "query": "台灣 蔥油餅"
+ },
+ {
+  "slug": "soy-milk",
+  "matchKeywords": [
+   "豆漿",
+   "豆米漿"
+  ],
+  "query": "鹹豆漿 燒餅"
+ },
+ {
+  "slug": "shaobing",
+  "matchKeywords": [
+   "燒餅",
+   "酥餅",
+   "胡椒餅"
+  ],
+  "query": "燒餅油條"
+ },
+ {
+  "slug": "fantuan",
+  "matchKeywords": [
+   "飯糰",
+   "飯團"
+  ],
+  "query": "台式 飯糰"
+ },
+ {
+  "slug": "congee",
+  "matchKeywords": [
+   "粥",
+   "鹹粥"
+  ],
+  "query": "台灣 鹹粥 虱目魚粥"
+ },
+ {
+  "slug": "mian-xian",
+  "matchKeywords": [
+   "麵線",
+   "面線"
+  ],
+  "query": "蚵仔麵線"
+ },
+ {
+  "slug": "danzai-noodles",
+  "matchKeywords": [
+   "擔仔麵"
+  ],
+  "query": "台南 擔仔麵"
+ },
+ {
+  "slug": "qiezai-noodles",
+  "matchKeywords": [
+   "切仔麵"
+  ],
+  "query": "切仔麵"
+ },
+ {
+  "slug": "dry-noodles",
+  "matchKeywords": [
+   "乾麵",
+   "意麵",
+   "陽春麵",
+   "拌麵",
+   "麻醬麵"
+  ],
+  "query": "台灣 乾麵 意麵"
+ },
+ {
+  "slug": "rice-noodles",
+  "matchKeywords": [
+   "米粉",
+   "米苔目",
+   "粿仔"
+  ],
+  "query": "台灣 炒米粉"
+ },
+ {
+  "slug": "ban-tiao",
+  "matchKeywords": [
+   "粄條",
+   "板條"
+  ],
+  "query": "客家 粄條"
+ },
+ {
+  "slug": "goat",
+  "matchKeywords": [
+   "羊肉爐",
+   "羊肉"
+  ],
+  "query": "羊肉爐"
+ },
+ {
+  "slug": "ginger-duck",
+  "matchKeywords": [
+   "薑母鴨"
+  ],
+  "query": "薑母鴨"
+ },
+ {
+  "slug": "hotpot",
+  "matchKeywords": [
+   "麻辣鍋",
+   "火鍋",
+   "酸菜白肉鍋",
+   "石頭鍋",
+   "涮"
+  ],
+  "query": "台灣 火鍋"
+ },
+ {
+  "slug": "stir-fry",
+  "matchKeywords": [
+   "熱炒",
+   "快炒",
+   "炒海瓜子",
+   "炒蟹"
+  ],
+  "query": "台式 熱炒"
+ },
+ {
+  "slug": "crab",
+  "matchKeywords": [
+   "螃蟹",
+   "烙蟳",
+   "蟹"
+  ],
+  "query": "清蒸 螃蟹 料理"
+ },
+ {
+  "slug": "shrimp",
+  "matchKeywords": [
+   "蝦"
+  ],
+  "query": "台灣 蝦料理 胡椒蝦"
+ },
+ {
+  "slug": "fried-chicken",
+  "matchKeywords": [
+   "鹽酥雞",
+   "雞排",
+   "炸雞",
+   "雞捲"
+  ],
+  "query": "台灣 鹽酥雞"
+ },
+ {
+  "slug": "bbq",
+  "matchKeywords": [
+   "燒肉",
+   "燒烤",
+   "串燒",
+   "烤肉"
+  ],
+  "query": "日式燒肉 yakiniku"
+ },
+ {
+  "slug": "pork-knuckle",
+  "matchKeywords": [
+   "豬腳"
+  ],
+  "query": "台灣 豬腳"
+ },
+ {
+  "slug": "steak",
+  "matchKeywords": [
+   "牛排"
+  ],
+  "query": "牛排 steak"
+ },
+ {
+  "slug": "pasta",
+  "matchKeywords": [
+   "義大利麵",
+   "燉飯",
+   "義麵"
+  ],
+  "query": "義大利麵 pasta"
+ },
+ {
+  "slug": "burger",
+  "matchKeywords": [
+   "漢堡"
+  ],
+  "query": "手工漢堡 burger"
+ },
+ {
+  "slug": "brunch",
+  "matchKeywords": [
+   "早午餐",
+   "歐姆蛋"
+  ],
+  "query": "早午餐 brunch"
+ },
+ {
+  "slug": "curry",
+  "matchKeywords": [
+   "咖哩"
+  ],
+  "query": "日式咖哩飯"
+ },
+ {
+  "slug": "pho",
+  "matchKeywords": [
+   "河粉",
+   "越南麵"
+  ],
+  "query": "越南河粉 pho"
+ },
+ {
+  "slug": "korean",
+  "matchKeywords": [
+   "韓式",
+   "部隊鍋",
+   "石鍋拌飯",
+   "烤五花"
+  ],
+  "query": "韓式料理 石鍋拌飯"
+ },
+ {
+  "slug": "thai",
+  "matchKeywords": [
+   "泰式",
+   "打拋",
+   "綠咖哩",
+   "月亮蝦餅"
+  ],
+  "query": "泰式料理 打拋豬"
+ },
+ {
+  "slug": "dumplings",
+  "matchKeywords": [
+   "水餃",
+   "鍋貼",
+   "煎餃",
+   "蒸餃"
+  ],
+  "query": "水餃 鍋貼"
+ },
+ {
+  "slug": "beef-pie",
+  "matchKeywords": [
+   "牛肉餡餅",
+   "餡餅"
+  ],
+  "query": "牛肉餡餅"
+ },
+ {
+  "slug": "peking-duck",
+  "matchKeywords": [
+   "烤鴨",
+   "片皮鴨"
+  ],
+  "query": "北京烤鴨"
+ },
+ {
+  "slug": "milkfish",
+  "matchKeywords": [
+   "虱目魚"
+  ],
+  "query": "台南 虱目魚"
+ },
+ {
+  "slug": "sakura-shrimp",
+  "matchKeywords": [
+   "櫻花蝦"
+  ],
+  "query": "櫻花蝦 炒飯"
+ },
+ {
+  "slug": "tuna",
+  "matchKeywords": [
+   "黑鮪魚",
+   "鮪魚"
+  ],
+  "query": "黑鮪魚 生魚片"
+ },
+ {
+  "slug": "shaved-ice",
+  "matchKeywords": [
+   "剉冰",
+   "雪花冰",
+   "泡泡冰",
+   "冰淇淋",
+   "豆花冰",
+   "芒果冰",
+   "八寶冰",
+   "綜合冰"
+  ],
+  "query": "台灣 芒果雪花冰"
+ },
+ {
+  "slug": "douhua",
+  "matchKeywords": [
+   "豆花"
+  ],
+  "query": "台灣 豆花"
+ },
+ {
+  "slug": "tangyuan",
+  "matchKeywords": [
+   "湯圓",
+   "圓仔",
+   "燒麻糬"
+  ],
+  "query": "湯圓 甜湯"
+ },
+ {
+  "slug": "mochi",
+  "matchKeywords": [
+   "麻糬",
+   "麻吉"
+  ],
+  "query": "台灣 麻糬"
+ },
+ {
+  "slug": "pineapple-cake",
+  "matchKeywords": [
+   "鳳梨酥"
+  ],
+  "query": "鳳梨酥"
+ },
+ {
+  "slug": "sun-cake",
+  "matchKeywords": [
+   "太陽餅",
+   "喜餅",
+   "糕餅",
+   "綠豆椪",
+   "蛋黃酥"
+  ],
+  "query": "台中 太陽餅"
+ },
+ {
+  "slug": "tea-drinks",
+  "matchKeywords": [
+   "紅茶",
+   "奶茶",
+   "青草茶",
+   "冬瓜茶",
+   "木瓜牛奶",
+   "珍珠",
+   "楊桃湯",
+   "青蛙下蛋"
+  ],
+  "query": "台灣 珍珠奶茶"
+ },
+ {
+  "slug": "coffee",
+  "matchKeywords": [
+   "咖啡",
+   "手沖",
+   "拿鐵",
+   "單品"
+  ],
+  "query": "手沖咖啡 pour over coffee"
+ },
+ {
+  "slug": "dessert-cake",
+  "matchKeywords": [
+   "蛋糕",
+   "千層",
+   "提拉米蘇",
+   "甜點",
+   "布丁",
+   "泡芙",
+   "司康"
+  ],
+  "query": "千層蛋糕 甜點"
+ },
+ {
+  "slug": "omakase",
+  "matchKeywords": [
+   "無菜單",
+   "主廚套餐",
+   "會席",
+   "懷石"
+  ],
+  "query": "日本料理 刺身 拼盤"
+ },
+ {
+  "slug": "cuisine-taiwanese",
+  "matchKeywords": [],
+  "query": "台菜 辦桌 料理"
+ },
+ {
+  "slug": "cuisine-street-food",
+  "matchKeywords": [],
+  "query": "台灣 夜市 小吃"
+ },
+ {
+  "slug": "cuisine-noodles",
+  "matchKeywords": [],
+  "query": "台灣 麵"
+ },
+ {
+  "slug": "cuisine-breakfast",
+  "matchKeywords": [],
+  "query": "台式早餐 燒餅 蛋餅"
+ },
+ {
+  "slug": "cuisine-seafood",
+  "matchKeywords": [],
+  "query": "台灣 海鮮 料理"
+ },
+ {
+  "slug": "cuisine-hotpot",
+  "matchKeywords": [],
+  "query": "火鍋"
+ },
+ {
+  "slug": "cuisine-bbq-fried",
+  "matchKeywords": [],
+  "query": "鹽酥雞 炸物"
+ },
+ {
+  "slug": "cuisine-japanese",
+  "matchKeywords": [],
+  "query": "日本料理"
+ },
+ {
+  "slug": "cuisine-chinese",
+  "matchKeywords": [],
+  "query": "中式 餐館 菜"
+ },
+ {
+  "slug": "cuisine-western",
+  "matchKeywords": [],
+  "query": "西餐 排餐"
+ },
+ {
+  "slug": "cuisine-asian",
+  "matchKeywords": [],
+  "query": "東南亞 料理"
+ },
+ {
+  "slug": "cuisine-dessert",
+  "matchKeywords": [],
+  "query": "台灣 甜品 冰"
+ },
+ {
+  "slug": "cuisine-drinks",
+  "matchKeywords": [],
+  "query": "珍珠奶茶"
+ },
+ {
+  "slug": "cuisine-cafe",
+  "matchKeywords": [],
+  "query": "咖啡店 拉花"
+ },
+ {
+  "slug": "cuisine-bakery",
+  "matchKeywords": [],
+  "query": "台式 糕餅"
+ },
+ {
+  "slug": "cuisine-vegetarian",
+  "matchKeywords": [],
+  "query": "素食 蔬食 料理"
+ }
+]

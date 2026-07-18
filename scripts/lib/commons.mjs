@@ -108,10 +108,11 @@ export async function loadRestaurants() {
   return { ALL: mod.ALL_RESTAURANTS, CITIES: mod.CITIES }
 }
 
-/** 下載 320px 覆核縮圖（把 960px thumb URL 降階）。 */
+/** 下載覆核縮圖。直接抓 API 給的 960px thumb（WMF 2025 起縮圖寬度有白名單，
+ *  隨便換 320px 會 400——不要用字串替換降階）。 */
 export async function downloadThumb(src, destPath) {
   try {
-    const res = await fetch(src.replace('/960px-', '/320px-'), { headers: { 'User-Agent': UA } })
+    const res = await fetch(src, { headers: { 'User-Agent': UA } })
     if (res.ok) {
       const { writeFileSync } = await import('node:fs')
       writeFileSync(destPath, Buffer.from(await res.arrayBuffer()))
