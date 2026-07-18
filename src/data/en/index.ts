@@ -11,6 +11,7 @@ import { en as hsinchu } from "./hsinchu";
 import { en as yilan } from "./yilan";
 import { en as changhua } from "./changhua";
 import { en as chiayi } from "./chiayi";
+import { en as kaohsiung } from "./kaohsiung";
 import { en as donggang } from "./donggang";
 import { en as hualien } from "./hualien";
 import { en as taitung } from "./taitung";
@@ -25,6 +26,7 @@ export const EN_ALL: Record<string, EnRestaurantText> = {
   ...yilan,
   ...changhua,
   ...chiayi,
+  ...kaohsiung,
   ...donggang,
   ...hualien,
   ...taitung,
