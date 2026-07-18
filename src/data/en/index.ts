@@ -3,6 +3,7 @@
 // 完成一城的英譯就在這裡加一行 import（鏡像 src/data/index.ts 的城市清單）。
 import type { EnRestaurantText } from "../types";
 import { en as taipeiA } from "./taipei-a";
+import { en as taipeiB } from "./taipei-b";
 import { en as keelung } from "./keelung";
 import { en as hsinchu } from "./hsinchu";
 import { en as yilan } from "./yilan";
@@ -14,6 +15,7 @@ import { en as taitung } from "./taitung";
 
 export const EN_ALL: Record<string, EnRestaurantText> = {
   ...taipeiA,
+  ...taipeiB,
   ...keelung,
   ...hsinchu,
   ...yilan,
