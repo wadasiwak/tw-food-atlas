@@ -82,15 +82,6 @@
   "query": "台灣 筒仔米糕"
  },
  {
-  "slug": "crab-rice",
-  "matchKeywords": [
-   "紅蟳米糕",
-   "紅蟳",
-   "處女蟳"
-  ],
-  "query": "紅蟳米糕"
- },
- {
   "slug": "xiaolongbao",
   "matchKeywords": [
    "小籠包",
@@ -114,7 +105,7 @@
    "粽子",
    "菜粽"
   ],
-  "query": "台灣 肉粽"
+  "query": "zongzi sticky rice dumpling"
  },
  {
   "slug": "wonton",
@@ -154,19 +145,12 @@
   "query": "台灣 鴨肉飯"
  },
  {
-  "slug": "goose",
-  "matchKeywords": [
-   "鵝肉"
-  ],
-  "query": "台灣 鵝肉"
- },
- {
   "slug": "eel-noodles",
   "matchKeywords": [
    "鱔魚意麵",
    "鱔魚"
   ],
-  "query": "台南 鱔魚意麵"
+  "query": "unagi eel dish"
  },
  {
   "slug": "squid",
@@ -215,7 +199,7 @@
    "黑輪",
    "天婦羅"
   ],
-  "query": "台灣 甜不辣"
+  "query": "oden Taiwan 關東煮"
  },
  {
   "slug": "stinky-tofu",
@@ -239,7 +223,7 @@
    "豆漿",
    "豆米漿"
   ],
-  "query": "鹹豆漿 燒餅"
+  "query": "豆漿"
  },
  {
   "slug": "shaobing",
@@ -256,7 +240,7 @@
    "飯糰",
    "飯團"
   ],
-  "query": "台式 飯糰"
+  "query": "飯糰"
  },
  {
   "slug": "congee",
@@ -264,7 +248,7 @@
    "粥",
    "鹹粥"
   ],
-  "query": "台灣 鹹粥 虱目魚粥"
+  "query": "congee rice porridge"
  },
  {
   "slug": "mian-xian",
@@ -282,13 +266,6 @@
   "query": "台南 擔仔麵"
  },
  {
-  "slug": "qiezai-noodles",
-  "matchKeywords": [
-   "切仔麵"
-  ],
-  "query": "切仔麵"
- },
- {
   "slug": "dry-noodles",
   "matchKeywords": [
    "乾麵",
@@ -297,7 +274,7 @@
    "拌麵",
    "麻醬麵"
   ],
-  "query": "台灣 乾麵 意麵"
+  "query": "擔擔麵 noodles Taiwan"
  },
  {
   "slug": "rice-noodles",
@@ -350,23 +327,14 @@
    "炒海瓜子",
    "炒蟹"
   ],
-  "query": "台式 熱炒"
- },
- {
-  "slug": "crab",
-  "matchKeywords": [
-   "螃蟹",
-   "烙蟳",
-   "蟹"
-  ],
-  "query": "清蒸 螃蟹 料理"
+  "query": "炒麵 stir fry"
  },
  {
   "slug": "shrimp",
   "matchKeywords": [
    "蝦"
   ],
-  "query": "台灣 蝦料理 胡椒蝦"
+  "query": "fried shrimp dish"
  },
  {
   "slug": "fried-chicken",
@@ -398,7 +366,12 @@
  {
   "slug": "steak",
   "matchKeywords": [
-   "牛排"
+   "牛排",
+   "肋眼",
+   "紐約客",
+   "菲力",
+   "丁骨",
+   "戰斧"
   ],
   "query": "牛排 steak"
  },
@@ -416,7 +389,7 @@
   "matchKeywords": [
    "漢堡"
   ],
-  "query": "手工漢堡 burger"
+  "query": "hamburger"
  },
  {
   "slug": "brunch",
@@ -449,7 +422,7 @@
    "石鍋拌飯",
    "烤五花"
   ],
-  "query": "韓式料理 石鍋拌飯"
+  "query": "bibimbap"
  },
  {
   "slug": "thai",
@@ -459,7 +432,7 @@
    "綠咖哩",
    "月亮蝦餅"
   ],
-  "query": "泰式料理 打拋豬"
+  "query": "pad thai"
  },
  {
   "slug": "dumplings",
@@ -477,7 +450,7 @@
    "牛肉餡餅",
    "餡餅"
   ],
-  "query": "牛肉餡餅"
+  "query": "xianbing 餡餅"
  },
  {
   "slug": "peking-duck",
@@ -521,14 +494,14 @@
    "八寶冰",
    "綜合冰"
   ],
-  "query": "台灣 芒果雪花冰"
+  "query": "芒果雪花冰"
  },
  {
   "slug": "douhua",
   "matchKeywords": [
    "豆花"
   ],
-  "query": "台灣 豆花"
+  "query": "douhua"
  },
  {
   "slug": "tangyuan",
@@ -537,7 +510,7 @@
    "圓仔",
    "燒麻糬"
   ],
-  "query": "湯圓 甜湯"
+  "query": "湯圓"
  },
  {
   "slug": "mochi",
@@ -545,7 +518,7 @@
    "麻糬",
    "麻吉"
   ],
-  "query": "台灣 麻糬"
+  "query": "daifuku"
  },
  {
   "slug": "pineapple-cake",
@@ -553,17 +526,6 @@
    "鳳梨酥"
   ],
   "query": "鳳梨酥"
- },
- {
-  "slug": "sun-cake",
-  "matchKeywords": [
-   "太陽餅",
-   "喜餅",
-   "糕餅",
-   "綠豆椪",
-   "蛋黃酥"
-  ],
-  "query": "台中 太陽餅"
  },
  {
   "slug": "tea-drinks",
@@ -587,7 +549,7 @@
    "拿鐵",
    "單品"
   ],
-  "query": "手沖咖啡 pour over coffee"
+  "query": "latte art"
  },
  {
   "slug": "dessert-cake",
@@ -600,7 +562,7 @@
    "泡芙",
    "司康"
   ],
-  "query": "千層蛋糕 甜點"
+  "query": "mille crepe cake"
  },
  {
   "slug": "omakase",
@@ -610,12 +572,12 @@
    "會席",
    "懷石"
   ],
-  "query": "日本料理 刺身 拼盤"
+  "query": "sashimi platter"
  },
  {
   "slug": "cuisine-taiwanese",
   "matchKeywords": [],
-  "query": "台菜 辦桌 料理"
+  "query": "台灣料理"
  },
  {
   "slug": "cuisine-street-food",
@@ -630,7 +592,7 @@
  {
   "slug": "cuisine-breakfast",
   "matchKeywords": [],
-  "query": "台式早餐 燒餅 蛋餅"
+  "query": "youtiao"
  },
  {
   "slug": "cuisine-seafood",
@@ -645,7 +607,7 @@
  {
   "slug": "cuisine-bbq-fried",
   "matchKeywords": [],
-  "query": "鹽酥雞 炸物"
+  "query": "fried chicken Taiwan"
  },
  {
   "slug": "cuisine-japanese",
@@ -655,17 +617,17 @@
  {
   "slug": "cuisine-chinese",
   "matchKeywords": [],
-  "query": "中式 餐館 菜"
+  "query": "chinese dishes cuisine"
  },
  {
   "slug": "cuisine-western",
   "matchKeywords": [],
-  "query": "西餐 排餐"
+  "query": "steak dinner plate"
  },
  {
   "slug": "cuisine-asian",
   "matchKeywords": [],
-  "query": "東南亞 料理"
+  "query": "green curry thai"
  },
  {
   "slug": "cuisine-dessert",
@@ -680,16 +642,16 @@
  {
   "slug": "cuisine-cafe",
   "matchKeywords": [],
-  "query": "咖啡店 拉花"
+  "query": "cafe latte"
  },
  {
   "slug": "cuisine-bakery",
   "matchKeywords": [],
-  "query": "台式 糕餅"
+  "query": "taiwanese pastry"
  },
  {
   "slug": "cuisine-vegetarian",
   "matchKeywords": [],
-  "query": "素食 蔬食 料理"
+  "query": "vegetarian buddhist cuisine"
  }
 ]
