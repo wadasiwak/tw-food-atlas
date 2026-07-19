@@ -15,6 +15,8 @@ import { ensureImagesLoaded } from './lib/images'
 export default function App() {
   const tab = useUiStore((s) => s.tab)
   const setTab = useUiStore((s) => s.setTab)
+  const goBrowse = useUiStore((s) => s.goBrowse)
+  const setBrowseView = useUiStore((s) => s.setBrowseView)
   const detailId = useUiStore((s) => s.detailId)
   const openDetail = useUiStore((s) => s.openDetail)
   const [shared, setShared] = useState<ShareEntry[] | null>(() => parseShareHash())
@@ -43,7 +45,20 @@ export default function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1 className="app-title" onClick={() => setTab('browse')}>
+        <h1
+          className="app-title"
+          title={lang === 'zh' ? '回首頁（清除所有篩選）' : 'Home (clear all filters)'}
+          onClick={() => {
+            // 站名＝回首頁：清空全部篩選、關閉詳情/分享、回列表模式
+            goBrowse({})
+            setBrowseView('list')
+            if (shared) {
+              history.replaceState(null, '', location.pathname + location.search)
+              setShared(null)
+            }
+            window.scrollTo(0, 0)
+          }}
+        >
           🍜 {t('appTitle')}
         </h1>
         <nav className="tabs">

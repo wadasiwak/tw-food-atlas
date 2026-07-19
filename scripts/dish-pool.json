@@ -373,7 +373,7 @@
    "丁骨",
    "戰斧"
   ],
-  "query": "牛排 steak"
+  "query": "grilled ribeye steak"
  },
  {
   "slug": "pasta",
@@ -622,7 +622,7 @@
  {
   "slug": "cuisine-western",
   "matchKeywords": [],
-  "query": "steak dinner plate"
+  "query": "steak frites"
  },
  {
   "slug": "cuisine-asian",

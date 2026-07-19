@@ -239,8 +239,23 @@ try {
     console.log('（目前無任何店家配圖，跳過圖片斷言）')
   }
 
+  // 17. 站名＝回首頁：設好篩選+搜尋後點標題，應全部清空回列表
+  await page.click('.view-toggle button >> nth=0')
+  await page.selectOption('.filter-bar select >> nth=0', 'tainan')
+  await page.fill('.search-input', '牛肉')
+  await page.waitForTimeout(200)
+  await page.click('.app-title')
+  await page.waitForTimeout(200)
+  const [cityVal, queryVal, shownAll] = await page.evaluate(() => [
+    document.querySelector('.filter-bar select').value,
+    document.querySelector('.search-input').value,
+    document.querySelectorAll('.grid .card').length,
+  ])
+  if (cityVal !== '' || queryVal !== '') fail(`點標題應清空篩選（city="${cityVal}", query="${queryVal}"）`)
+  if (shownAll < 12) fail('點標題後應回全站列表')
+
   await browser.close()
-  console.log('e2e OK：篩選、詳情、#r 直開、推薦+理由、換一批、分享+垃圾hash、持久化、隱私、搜尋、隨機抽、口味輪廓、地圖降級、語言切換、?lang=en、英文分享、圖片降級全部通過')
+  console.log('e2e OK：篩選、詳情、#r 直開、推薦+理由、換一批、分享+垃圾hash、持久化、隱私、搜尋、隨機抽、口味輪廓、地圖降級、語言切換、?lang=en、英文分享、圖片降級、標題回首頁全部通過')
 } finally {
   server.kill()
 }
