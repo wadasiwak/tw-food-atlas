@@ -20,6 +20,7 @@ export default function App() {
   const detailId = useUiStore((s) => s.detailId)
   const openDetail = useUiStore((s) => s.openDetail)
   const [shared, setShared] = useState<ShareEntry[] | null>(() => parseShareHash())
+  const [showTop, setShowTop] = useState(false)
   const ratedCount = useRatingStore((s) => Object.keys(s.ratings).length)
   const t = useT()
   const { lang, setLang } = useLangStore()
@@ -32,6 +33,13 @@ export default function App() {
   // 店家配圖 map 是 lazy chunk，開站背景載入；載到前卡片先走 emoji 版面
   useEffect(() => {
     ensureImagesLoaded()
+  }, [])
+
+  // 長列表滑超過一屏才浮現回頂鈕
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > window.innerHeight)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   // #r/<id> 直達店家詳情
@@ -107,6 +115,15 @@ export default function App() {
       )}
 
       {detail && <DetailOverlay all={ALL_RESTAURANTS} restaurant={detail} />}
+
+      <button
+        className={`back-to-top${showTop ? ' show' : ''}`}
+        aria-label={t('backToTop')}
+        title={t('backToTop')}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      >
+        ↑
+      </button>
 
       <footer className="data-credit">{t('footerCredit')}</footer>
     </div>

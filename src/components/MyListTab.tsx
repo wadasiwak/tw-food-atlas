@@ -12,7 +12,8 @@ import { RateActions } from './RateActions'
 import { cityById } from '../data'
 
 export function MyListTab({ all: _all }: { all: Restaurant[] }) {
-  const { ratings, skipped, watchlist, removeRating, unmarkSkipped, importAll } = useRatingStore()
+  const { ratings, skipped, watchlist, rate, removeRating, unmarkSkipped, importAll } =
+    useRatingStore()
   const t = useT()
   const lang = useLang()
   const loc = useLocalizer()
@@ -132,12 +133,20 @@ export function MyListTab({ all: _all }: { all: Restaurant[] }) {
           <div className="my-list">
             {ratedRows.map(({ restaurant: r, score, id }) => (
               <div className="list-row" key={id}>
-                <span
-                  className="score-pill"
+                <select
+                  className="score-pill score-edit"
+                  title={t('editScore')}
+                  aria-label={t('editScore')}
+                  value={score}
                   style={{ '--score-color': scoreColor(score) } as React.CSSProperties}
+                  onChange={(e) => rate(id, Number(e.target.value))}
                 >
-                  {score}
-                </span>
+                  {Array.from({ length: 10 }, (_, i) => 10 - i).map((s) => (
+                    <option key={s} value={s}>
+                      {s}
+                    </option>
+                  ))}
+                </select>
                 <div className="titles">
                   <div className="t1">{loc(r).name}</div>
                   <div className="t2">

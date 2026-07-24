@@ -116,6 +116,12 @@ h3 { color: var(--accent); margin: 22px 0 10px; font-size: 16px; letter-spacing:
   border-radius: 999px; padding: 2px 10px; font-size: 12.5px; white-space: nowrap;
 }
 .match { color: var(--good); font-size: 12.5px; margin-left: auto; }
+select.score-edit {
+  appearance: none; -webkit-appearance: none;
+  background: var(--cell) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0l4 5 4-5z' fill='%23948aa5'/%3E%3C/svg%3E") no-repeat right 8px center;
+  cursor: pointer; text-align: center;
+  padding: 4px 20px 4px 12px; font-size: 13px; font-weight: 700;
+}
 
 /* reasons chips */
 .reasons { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; padding: 0 14px; }
@@ -232,6 +238,18 @@ button.danger { color: var(--bad); border-color: rgba(255, 122, 122, 0.4); }
   padding: 10px 18px; font-weight: 700; cursor: pointer; margin-top: 8px;
 }
 .compare-note b { color: var(--good); }
+
+/* back to top */
+.back-to-top {
+  position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom));
+  width: 44px; height: 44px; border-radius: 999px;
+  background: var(--accent); color: #1a1208; border: 1px solid var(--accent-dim);
+  font-size: 20px; font-weight: 700; cursor: pointer; z-index: 40;
+  opacity: 0; pointer-events: none; transition: opacity 0.2s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+.back-to-top.show { opacity: 1; pointer-events: auto; }
+.back-to-top:hover { background: #f5a75f; }
 
 /* footer */
 .data-credit { color: var(--text-dim); font-size: 12px; text-align: center; margin-top: 40px; }

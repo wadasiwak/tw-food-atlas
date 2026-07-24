@@ -105,6 +105,7 @@ const STR = {
     importOk: '匯入完成！',
     importBad: '檔案格式不對，沒有匯入。',
     emptyList: '還沒有東西。去「探索」或「評分」逛逛吧。',
+    editScore: '點擊修改評分',
     shareBtn: '分享我的美食 Top 10',
     shareCopied: '分享連結已複製！傳給朋友看你的口味吧。',
     needRatings: '先評幾家店才有 Top 10 可以分享。',
@@ -121,6 +122,7 @@ const STR = {
     scorePill: '{0} 分',
     // Footer
     footerCredit: '內容為原創整理 · © 2026 wadasiwak · 未經授權禁止轉載',
+    backToTop: '回到頂部',
   },
   en: {
     appTitle: 'Taiwan Food Atlas',
@@ -180,6 +182,7 @@ const STR = {
     importOk: 'Imported!',
     importBad: 'Bad file format; nothing imported.',
     emptyList: 'Nothing yet. Explore or rate some places first.',
+    editScore: 'Tap to change score',
     shareBtn: 'Share my food Top 10',
     shareCopied: 'Share link copied! Send it to a friend.',
     needRatings: 'Rate a few places first to build a Top 10.',
@@ -194,6 +197,7 @@ const STR = {
     minePill: 'Me: {0}',
     scorePill: '{0} pts',
     footerCredit: 'Original curated content · © 2026 wadasiwak · All rights reserved',
+    backToTop: 'Back to top',
   },
 } satisfies Record<Lang, Record<string, string>>
 
