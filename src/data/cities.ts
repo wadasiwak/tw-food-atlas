@@ -54,8 +54,8 @@ export const CITIES: CityDef[] = [
   },
   {
     id: "changhua",
-    name: "彰化鹿港",
-    nameEn: "Changhua & Lukang",
+    name: "彰化",
+    nameEn: "Changhua",
     emoji: "🏮",
     region: "central",
     bbox: { minLat: 23.98, maxLat: 24.14, minLng: 120.4, maxLng: 120.62 },
@@ -86,8 +86,8 @@ export const CITIES: CityDef[] = [
   },
   {
     id: "donggang",
-    name: "屏東東港",
-    nameEn: "Donggang",
+    name: "屏東",
+    nameEn: "Pingtung",
     emoji: "🐟",
     region: "south",
     bbox: { minLat: 22.4, maxLat: 22.52, minLng: 120.4, maxLng: 120.52 },
